@@ -10,22 +10,22 @@ int beats[] = {1,1,1,1,1,1,2,1,1,1,1,1,1,2,4};
 int tempo = 300;
 
 int cpt = 0;
-int detected = 0;           // 0 = False, 1 = True
 
 void play(char note, int duration)
 {
   char names[] = {'c', 'd', 'e', 'f', 'g', 'a', 'b', 'c'};
-  int tones[] = {1915, 1700, 1519, 1432, 1275, 1136, 1014, 956};
+  int freq[] = {1915, 1700, 1519, 1432, 1275, 1136, 1014, 956};
   for(int i=0; i<8; i++)
   {
     if(names[i] == note)
     {
-      for(long i=0; i<duration*1000L; i+=tones[i]*2)
+      //tone(BUZZER, freq[i], 500);
+      for(long i=0; i<duration*1000L; i+=freq[i]*2)
       {
         digitalWrite(BUZZER, HIGH);
-        delay(tones[i]);
+        delay(freq[i]);
         digitalWrite(BUZZER, LOW);
-        delay(tones[i]);
+        delay(freq[i]);
       }
     }
   }
@@ -33,8 +33,9 @@ void play(char note, int duration)
 
 void runBuzzer()
 {  
-  digitalWrite(RED, HIGH);  
+  digitalWrite(RED, LOW);  
   Serial.println("Moving people detected");
+  /*
   for(int i=0; i<15; i++)   
   {  
     if (notes[i] == ' ')  
@@ -46,7 +47,8 @@ void runBuzzer()
       play(notes[i], beats[i]*tempo);  
     }  
     delay(tempo/2);         // pause between notes  
-  }  
+  }
+  */  
 } 
 
 void stopBuzzer()
@@ -59,7 +61,8 @@ void stopBuzzer()
 void setup()
 {
     pinMode(PIR, INPUT);
-    Serial.begin(9600);   
+    Serial.begin(9600); 
+    Serial.println("Start alarm");  
     
     pinMode(RED, OUTPUT);
     pinMode(BLUE, OUTPUT);
@@ -71,15 +74,15 @@ void setup()
  
 void loop()
 {
-    if(digitalRead(PIR))          // if it detects the moving people
-    {
-        runBuzzer();
-        cpt++;
-    }
-    else
-    {
-        stopBuzzer();
-    }
- 
- delay(200);
+  Serial.println("Moving people detected");
+  if(digitalRead(PIR))          // if it detects the moving people
+  {
+      runBuzzer();
+      cpt++;
+  }
+  else
+  {
+      stopBuzzer();
+  }
+  //delay(200);
 }
