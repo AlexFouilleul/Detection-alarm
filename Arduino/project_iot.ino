@@ -6,6 +6,7 @@
 #define BLUE 24         // Blue LED
 #define GREEN 23        // Green LED
 #define BUZZER 11       // Buzzer
+#define BUTTON A6       // Button
 
 /* globales variables */
 uint32_t cpt = 0;
@@ -43,6 +44,9 @@ void setup()
   // Serial communication
   Serial.begin(9600);
   Serial.println("Start alarm");
+
+  // Button
+  pinMode(BUTTON, INPUT);
 
   // PIR sensor
   pinMode(PIR, INPUT);
@@ -106,7 +110,7 @@ void loop()
   {
     digitalWrite(BLUE, HIGH);
     digitalWrite(GREEN, HIGH);
-    if(digitalRead(PIR))
+    if(digitalRead(PIR) || digitalRead(BUTTON))
       runBuzzer();
     else
       stopBuzzer();
