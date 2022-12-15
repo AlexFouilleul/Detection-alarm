@@ -16,6 +16,10 @@
 
 
 
+## 🛠️ Issues
+
+
+
 ## 🧑‍💻 Contributors
 
 Anas Bachri (dev) - [anas.bachri@etu.univ-grenoble-alpes.fr](mailto:Anas.Bachri@etu.univ-grenoble-alpes.fr)<br>
