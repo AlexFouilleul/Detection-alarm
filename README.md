@@ -14,7 +14,12 @@
 
 ## 💻 Compatible hardware
 
-
+- Arduino Tiny Machine Learning
+- Arduino Nano 33 BLE
+- Grove buzzer
+- Grove PIR sensor
+- Grove button
+- Ligthstrip (8 LED WS2812B) 
 
 ## 🛠️ Issues
 
