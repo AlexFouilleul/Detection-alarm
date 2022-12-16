@@ -2,10 +2,10 @@
 #include <Adafruit_NeoPixel.h>
 
 /* definitions of sensors pins */
-#define LEDALARM 12     // WS2812B LED
-#define BUZZER 11       // Buzzer
-#define PIR A6          // PIR Sensor
-#define BUTTON A6       // Button
+#define LEDALARM 12                                     // WS2812B LED
+#define BUZZER 11                                       // Buzzer
+#define PIR A6                                          // PIR Sensor
+#define BUTTON A6                                       // Button
 
 /* globales variables */
 uint32_t cpt = 0;
@@ -22,9 +22,11 @@ void runBuzzer() {
   cpt++;
   led_alarm.fill(led_alarm.Color(255,0,0), 0, 8);
   led_alarm.show();
-  for (int rep=0; rep<5; rep++) {
-    for (int freq=1400; freq<=1600; freq++) {
+  for(int rep=0; rep<5; rep++) {
+    for(int freq=1400; freq<=1600; freq++) {
       tone(BUZZER, freq);
+      led_alarm.setBrightness((int)map(freq, 1400, 1600, 1, 20));
+      led_alarm.show();
       delay(5);
     }
   }
@@ -34,69 +36,69 @@ void runBuzzer() {
 void stopBuzzer() {
   led_alarm.clear();
   led_alarm.show();
+  led_alarm.setBrightness(10);
   noTone(BUZZER);
 }
 
-void setup() {
-  Serial.begin(9600);
-  Serial.println("Start alarm");
+void setAlarmState() {
+  nb_detected.writeValue(cpt);
+  if(activation.written()) {                            // if data received 
+    activation_state = activation.value();
+    if(activation_state == 0) {                         // long bip if disabled
+      tone(BUZZER, 1000, 200);
+      delay(250);
+      tone(BUZZER, 1000, 200);
+    }
+    else                                                // 2 bip if enabled
+      tone(BUZZER, 1000, 500);
+  }
+  led_alarm.fill(led_alarm.Color(0,0,255), 0, 8);       // if disabled = full blue led, if enabled = extremity led red
+  if(activation_state == 1) {
+    led_alarm.setPixelColor(0, led_alarm.Color(255,0,0));
+    led_alarm.setPixelColor(1, led_alarm.Color(255,0,0));
+    led_alarm.setPixelColor(6, led_alarm.Color(255,0,0));
+    led_alarm.setPixelColor(7, led_alarm.Color(255,0,0));
+  }
+  led_alarm.show();
+}
 
+void setup() {
   pinMode(BUTTON, INPUT);
   pinMode(PIR, INPUT);
-  
   pinMode(BUZZER, OUTPUT);
   tone(BUZZER, 0);
 
   led_alarm.begin();
   led_alarm.clear();
   led_alarm.show();
-  led_alarm.setBrightness(5);
+  led_alarm.setBrightness(10);
 
-  // Bluetooth
-  BLE.begin();                                      // start bluetooth
-  BLE.setLocalName("Detection alarm");              // set device name
-  BLE.setAdvertisedService(customService);          // set advertised service UUID
-  customService.addCharacteristic(nb_detected);     // add the characteristics to the service
+  BLE.begin();                                          // start bluetooth
+  BLE.setLocalName("Detection alarm");                  // set device name
+  BLE.setAdvertisedService(customService);              // set advertised service UUID
+  customService.addCharacteristic(nb_detected);         // add the characteristics to the service
   customService.addCharacteristic(activation);
   customService.addCharacteristic(pin_code);
-  BLE.addService(customService);                    // add service
-  BLE.setConnectable(true);                         // define possibility to connect to this device
-  BLE.advertise();                                  // start advertising
+  BLE.addService(customService);                        // add service
+  BLE.setConnectable(true);                             // define possibility to connect to this device
+  BLE.advertise();                                      // start advertising
 }
 
 void loop()
 {
-  BLEDevice central = BLE.central();      // listen for connection by others devices
+  BLEDevice central = BLE.central();                    // listen for connection by others devices
 
-  if(central)                             // if a device is connected to the system
-  {
-    led_alarm.fill(led_alarm.Color(0,0,255), 0, 8);
-    led_alarm.show();
-    nb_detected.writeValue(cpt);
+  if(central) {                                         // if device is connected to the system
+    setAlarmState();
     // Gérer l'envoie de juste une data
     //cpt = 0;
-    if(activation.written()) {            // if received data
-      activation_state = activation.value();
-      if(activation_state == 0) {         // long bip if disabled
-        tone(BUZZER, 1000);
-        delay(200);
-        tone(BUZZER, 0);
-      }
-      else {                              // 2 bip if enabled
-        tone(BUZZER, 659);
-        delay(200);
-        tone(BUZZER, 0);
-        delay(50);
-        tone(BUZZER, 659);
-        delay(200);
-        tone(BUZZER, 0);
-      }
-    }
   }
-  else if(activation_state == 1) {        // if alarm is enabled
+  else if(activation_state == 1) {
     if(digitalRead(PIR) || digitalRead(BUTTON))
       runBuzzer();
     else
       stopBuzzer();
   }
+  else
+    stopBuzzer();
 }
