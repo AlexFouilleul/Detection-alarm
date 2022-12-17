@@ -22,7 +22,7 @@
 - Ligthstrip (8 LED WS2812B) 
 
 ## 🛠️ Issues
-
+- Due to security restrictions put in place by Google on Android, the application does not work on Android 13.
 
 
 ## 🧑‍💻 Contributors
