@@ -1,4 +1,4 @@
-# Welcome to our project Detection-alarm
+# Welcome to our project : Detection-alarm 🔐
 
 <p align="center">
   <img src="Images/Logo2.png" width="100">
