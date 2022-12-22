@@ -34,7 +34,9 @@ Detection alarm is a 3rd year engineering school project at Polytech Grenoble in
 - Ligthstrip (8*LED WS2812B) 
 
 ### Software
-- 
+- "[LightBlue® - Bluetooth Low Energy](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1)" available on the Google Play Store<br>
+or
+- "Detection alarm" application available in this repository
 
 ### Others
 - Power alimentation with phone charger and micro USB cable
