@@ -19,10 +19,14 @@ Detection alarm is a 3rd year engineering school project at Polytech Grenoble in
   - Enable/disable alarm
   - See how many people have been detected
   - View detection history
+  
+
 
 ## 📲 Quick start guide and documentation
 
+(à rédiger)
 
+For more informations, please take a look at the report available in French.
 
 ## 💻 Compatible equipments
 
