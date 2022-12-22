@@ -1,29 +1,49 @@
 # Welcome to our project Detection-alarm
 
+<p align="center">
+  <img src="Images/Logo2.png" width="100">
+</p>
+
 ## 💡 Introduction
 
-
+Detection alarm is a 3rd year engineering school project at Polytech Grenoble in the IESE speciality. This project is part of the IoT courses we follow with 16h of practical work in order to carry out this project.
 
 ## ⚙️ Features
 
-
+- Detection with an angle of 120 degrees and up to a distance of 6 meters
+- Warning with light effects
+- Wall mounting check
+- Bluetooth Low Energy (BLE) communication
+- Cheap
+- Controllable with an Android application :
+  - Enable/disable alarm
+  - See how many people have been detected
+  - View detection history
 
 ## 📲 Quick start guide and documentation
 
 
 
-## 💻 Compatible hardware
+## 💻 Compatible equipments
 
-- Arduino Tiny Machine Learning
-- Arduino Nano 33 BLE
-- Grove buzzer
-- Grove PIR sensor
-- Grove button
-- Ligthstrip (8 LED WS2812B) 
+### Hardware
+- [Arduino Tiny Machine Learning Kit](https://store.arduino.cc/products/arduino-tiny-machine-learning-kit) based on Arduino Nano 33 BLE
+- [Grove buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/)
+- [Grove PIR sensor](https://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/)
+- [Grove button](https://wiki.seeedstudio.com/Grove-Button/)
+- Ligthstrip (8*LED WS2812B) 
+
+### Software
+- 
+
+### Others
+- Power alimentation with phone charger and micro USB cable
+- Plywood with 3mm thickness for the box
 
 ## 🛠️ Issues
 - Due to security restrictions put in place by Google on Android, the application does not work on Android 13.
-
+- The Arduino can only deliver low power so the brightness of the LEDs is limited.
+- The Android application created only allows sending data from the Arduino to the smartphone. The reverse is not possible because of the format of the data exchanged between the two devices.
 
 ## 🧑‍💻 Contributors
 
