@@ -58,3 +58,7 @@ Alex Fouilleul (dev) - [alex.fouilleul@etu.univ-grenoble-alpes.fr](mailto:alex.f
 
 Polytech Grenoble - IESE5<br>
 IoT project, 2022 - 2023
+
+<p align="left">
+  <img src="Images/Logo_polytech.png" width="200">
+</p>
