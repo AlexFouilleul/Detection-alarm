@@ -1,0 +1,43 @@
+- Soutenance (XX minutes par groupe)
+  - 7 minutes de présentation
+  - 5 minutes de questions-réponses
+  
+- Screencast de votre présentation (en cas de perte de connectivité pendant la soutenance)
+
+- Screencast de votre démonstration (5 minutes)
+
+- Rapport (1 page pour chacun des points ci-dessus hors annexes techniques : dans le répertoire ./report/ du dépôt Github
+  - réaliser une analyse (rapide) du marché des produits commerciaux concurrents
+  - définir l’architecture globale du systèmes (ensemble d’objets, service en ligne (cloud)),
+  - définir la sécurité globale (clé de chiffrage),
+  - définir le respect de la vie privée du service (RGPD) : lister les risques d’atteinte au respect de la vie privée
+  - définir l’architecture matérielle de l’objet,
+  - estimer le coût de la BOM de votre produit (composants, PCB et enclosure) pour 5000 unités produites
+    - pour le boitier, vous pouvez rechercher des boitiers “standards” disponibles dans les catalogues fournisseurs
+    - pour le PCB, vous pouvez fournir une estimation du prix de fabrication du PCB et du masque chez des fournisseurs comme https://jlcpcb.com/ , https://www.wedirekt.fr/fr/ … 
+  - estimer le coût de certification ETSI du produit, le coût de certification LoRa Alliance du produit ...
+  - proposer une implémentation du logiciel embarqué de l’objet défini.
+  - définir/documenter le format des messages uplink et downlink échangés (dans le cas des objets LoRaWAN, privilégiez le format LPP)
+  - définir le logiciel embarqué de l’objet.
+  - donner les métriques logiciel du logiciel embarqué (nombre de lignes de code, taille du binaire du firmware ie le fichier .bin)
+  - instrumenter le logiciel embarqué pour mesurer es différents temps d’exécution des principales phases d’exécution (par exemple: durée d’une prise de photo, écriture sur carte SD, inférences avec un réseau de neurones …)
+    - Prévoir de montrer la trace console de l’objet pendant la démonstration.
+  - estimer la durée de vie de la batterie de l’objet (pour LoRaWAN en fonction du datarate comme avec l’outil https://www.elsys.se/en/battery-life-calculator/ 
+  - réaliser une analyse (brève) du cycle de vie du produit “durable” et “sobre” (ACV)
+  - rechercher et analyser (avantages/inconvénients sous la forme d’une grille) des produits concurrents
+  - montrer les intégrations effectuées (cayenne, influxdb, home assistant, jupyter notebook  …)
+  - compter le nombre de lignes de code développé (coté objet, coté application) avec un outil comme cloc. Précisez les langages et les outils utilisés (git, arduino-cli …)
+
+- Privilégiez les schémas (qui peuvent être manuscrits)).
+
+- Vous listerez les fonctionnalités prévues, celles réalisées et celles non réalisés.
+
+- Listez les problèmes rencontrés
+
+- Copies d’écran de vos tableaux de bord : dans le répertoire ./report/ du dépôt Github
+
+- Code source (structuré et commenté) de l’objet : dans le répertoire ./endpoint/src/ du dépôt Github
+
+- Schémas pour la réalisation du boitier (impression 3D, découpe laser) dans le répertoire ./endpoint/enclosure/ du dépôt Github
+
+- Flyer A4 3 volets recto-verso de votre plaquette commerciale (n’oubliez pas d’ajouter un QRCode)
