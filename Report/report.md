@@ -124,11 +124,13 @@ D'autres éléments sont également utilisés comme :
 
 (à rédiger sous forme d'une grille avantages/inconvénients)
 
-| Produit              | Avantages                                                                    | Inconvénients |
-| -------------------- | ---------------------------------------------------------------------------- | ------------- |
-| Alarme classique     | <ul><li>Fiabilité</li><li>Robustesse</li></ul>                               | <ul><li>Prix (100 à 1500€)</li><li>item2</li></ul> |
-| Centrale domotique   | <ul><li>Prix(40€ la centrale, ~10€ le capteur)</li><li>Evolutivité</li></ul> | blablabla |
-| Notre alarme         | blablabla     | blablabla |
+Dans cette partie nous comparons les différents produits vis à vis du notre. L'idée n'est pas de cibler un produit en particulier mais plutot une gamme de produit afin d'éviter d'avoir un tableau redondant étant donné qu'ils existent de nombreuses alarme à détection et qu'elles se valent toutes plus ou moins dans les grandes lignes.
+
+| Produit              | Avantages                                                                    | Inconvénients                             |
+| -------------------- | ---------------------------------------------------------------------------- | ----------------------------------------- |
+| Alarme classique     | <ul><li>Fiabilité</li><li>Robustesse</li></ul>                               | <ul><li>Prix (100 à 1500€)</li></ul>      |
+| Centrale domotique   | <ul><li>Prix(40€ la centrale, ~10€ le capteur)</li><li>Evolutivité</li></ul> | <ul><li>Facilement désactivable</li></ul> |
+| Notre alarme         | <ul><li>Peu couteux</li><li>Open Source</li></ul>                            | <ul><li>Prototype</li></ul>               |
 
 <span style="color:blue">some *blue* text</span>
 
