@@ -44,7 +44,7 @@ or
 
 ### Others
 - Power alimentation with phone charger and micro USB cable
-- Plywood with 3mm thickness for the box
+- Plywood with 3mm thickness for the case
 
 ## 🛠️ Issues
 - Due to security restrictions put in place by Google on Android, the application does not work on Android 13.
