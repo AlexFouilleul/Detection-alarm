@@ -58,7 +58,7 @@ Le but étant de placer le boitier à une distance relativement haute afin qu'il
 (à rédiger)
 
 
-##Architecture matérielle de l'objet
+## Architecture matérielle de l'objet
 
 Afin de mener à bien ce projet nous avons utilisé différents éléments qui sont les suivants :
 - Un [Arduino Tiny Machine Learning Kit](https://store.arduino.cc/products/arduino-tiny-machine-learning-kit) qui est basé sur une Arduino Nano 33 BLE Lite. Cette carte est spécifiquement concu pour les projets IoT. En effet, elle dispose de nombreux éléments dont : 
@@ -135,9 +135,18 @@ Dans cette partie nous comparons les différents produits vis à vis du notre. L
 
 ## Intégrations effectuées
 
-Afin de communiquer avec le système une première intégration a été mise en place à travers l'application "[LightBlue® - Bluetooth Low Energy](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1)" disponible seuelement Google Play Store pour les téléphones Android. Cette application permet de se connecter à n'importe quel appareil utilisant le protocole Bluetooth Low Energy. Grâce à celle-ci nous sommes donc en mesure de détecter le ou les services Bluetooth que propose le système. Elle a été spécifiquement concu pour les développeurs, ainsi pour chaque service on peut venir lire, écrire ou être notifié en fonction de comment le service a été défini dans le code auparavant. De plus on peut gérer l'envoi sous différentes forme (binaire, hexa, caractère, signed/unsigned ou encore little/big endian). Cette application nous a donc été très utile cependant elle ne dispose pas d'une interface claire et lisible pour un utilisateur lambda.
+Afin de communiquer avec le système une première intégration a été mise en place à travers l'application "[LightBlue® - Bluetooth Low Energy](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1)" disponible seuelement Google Play Store pour les téléphones Android. 
+Cette application permet de se connecter à n'importe quel appareil utilisant le protocole Bluetooth Low Energy. Grâce à celle-ci nous sommes donc en mesure de détecter le ou les services Bluetooth que propose le système. Elle a été spécifiquement concu pour les développeurs, ainsi pour chaque service on peut venir lire, écrire ou être notifié en fonction de comment le service a été défini dans le code auparavant. De plus on peut gérer l'envoi sous différentes forme (binaire, hexa, caractère, signed/unsigned ou encore little/big endian). 
+Cette application nous a donc été très utile cependant elle ne dispose pas d'une interface claire et lisible pour un utilisateur lambda. 
 
+Dans cette optique nous avons décidé de créer une seconde application Android qui serait spécifiquement dédié au projet. Cette application serait basique mais permettrait de mettre en forme les informations et communiquer avec les services Bluetooth dont dispose le système. N'ayant pas de connaissances particulières sur le développement d'application sous Android nous avons fait le choix de développer sous [MIT App Inventor](https://appinventor.mit.edu/). 
 
 ## Nombre de lignes de code développé
 
 (à rédiger en spécifiant les outils utilisés)
+
+Afin de mettre à bien ce projet nous avons rédigé 112 lignes de code en C sous l'IDE Arduino. Afin de réduire ce nombre de ligne de code nous avons utilisé des librairies déjà concu et permettant de grandement gagner du temps face au peu de temps dont nous disposons. 
+
+Concernant l'application développé sous MIT App Inventor celle-ci ne fonctionne pas sous forme de ligne de code mais sous forme de blocs à empiler (façon Scratch). Par conséquent il est difficile de quantifier le travail réalisé mais nous avons cependant essayé de faire des blocs génériques afin qu'ils puissent facilement s'adapter aux services Bluetooth dont nous disposons. Cette démarche nous a ainsi permis de gagner du temps là encore.
+
+L'ensemble du code est disponible dans les répertoires [Arduino](https://github.com/AlexFouilleul/Detection-alarm/tree/main/Arduino) et [Application](https://github.com/AlexFouilleul/Detection-alarm/tree/main/Application). 
