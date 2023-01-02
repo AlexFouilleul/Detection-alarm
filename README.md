@@ -40,7 +40,7 @@ For more informations, please take a look at the report available in French.
 ### Software
 - "[LightBlue® - Bluetooth Low Energy](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1)" available on the Google Play Store<br>
 or
-- "Detection alarm" application available in this repository
+- "[Detection alarm](https://github.com/AlexFouilleul/Detection-alarm/blob/main/Application/Detection_alarm.apk)" application available in this repository
 
 ### Others
 - Power alimentation with phone charger and micro USB cable
