@@ -93,19 +93,26 @@ D'autres éléments sont également utilisés comme :
 
 La BOM est la liste compète de toutes les pièces et matières utilisée afin de fabriquer ce produit. Pour la réaliser, on se base sur une estimation de production de l'ordre de 5000 unités produites. On dresse alors le tableau suivant :
 
-| Matériel                          | Quantité | Prix unitaire | Prix de groupe | Revendeur | Remarque                                   |
-| --------------------------------- | -------- | ------------- | -------------- | --------- | ------------------------------------------ |
-| Arduino Tiny Machine Learning Kit | 5000     | ???           | ???            | ???       | ???                                        |
-| Buzzer Grove                      | 5000     | ???           | ???            | ???       | ???                                        |
-| Bouton Grove                      | 5000     | ???           | ???            | ???       | ???                                        |
-| Capteur PIR                       | 5000     | ???           | ???            | ???       | ???                                        |
-| Bandeau LED WS2812B               | 5000     | ???           | ???            | ???       | Densité de ??? LED/m                       |
-| Contreplaqué                      | 5000     | ???           | ???            | ???       | Surface unitaire de ???m² (total = ??? m²) |
-| Chargeur de téléphone             | 5000     | ???           | ???            | ???       | Puissance de 5V - 1,5A et longueur 1,5m    |
-| Cable micro-USB                   | 5000     | ???           | ???            | ???       | ???                                        |
-| Vis                               | 15000    | ???           | ???            | ???       | Diamètre de la tige de 4 mm                |
+| Matériel | Quantité | Prix unitaire | Prix de groupe | Revendeur | Remarque |
+| -------- | -------- | ------------- | -------------- | --------- | -------- |
+| Arduino Tiny Machine Learning Kit | 5000 | 50,40 € | 252 000 € | [Arduino](https://store.arduino.cc/products/arduino-tiny-machine-learning-kit) | Cable micro USB inclus |
+| Buzzer Grove | 5000 | 1,06 € | 5 300 € | [SeeedStudio](https://www.seeedstudio.com/Grove-Buzzer.html) | |
+| Bouton Grove | 5000 | 1,30 € | 6 500 € | [SeeedStudio](https://www.seeedstudio.com/Grove-Button.html) | |
+| PIR Grove | 5000 | 6,10 € | 30 500 € | [SeeedStudio](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor.html) | |
+| Cable Grove  | 4000 | 2,20 € | 8 800 € | [SeeedStudio](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-5-PCs-Pack-p-749.html) | Lot de 5 cable Grove de 20 cm |
+| Bandeau LED WS2812B | 100 | 14,69 € | 1 469 € | [Aliexpress](https://fr.aliexpress.com/item/1005002890783311.html) | Longueur 5m - Densité 60LED/m - Protection IP65 |
+| Chargeur de téléphone | 5000 | 4,84 € | 24 200 € | [RS Components](https://fr.rs-online.com/web/p/adaptateurs-ac-dc/2237481) | Puissance : 5V - 1A |
+| Contreplaqué | 455 | 16,59€ | 7 549 € | [Leroy Merlin](https://www.leroymerlin.fr/produits/menuiserie/panneau-planche-et-materiaux-bois/panneau-bois-agglomere-mdf/panneau-bois-recoupable/panneau-contreplaque-peuplier-ep-3-mm-x-l-100-x-75-cm-82707642.html) | Surface unitaire = ~675 cm² |
+| Vis | 38 | 6,90 € | 263 € | [Leroy Merlin](https://www.leroymerlin.fr/produits/quincaillerie/cheville-vis-clou-et-boulon/vis/vis-a-bois/lot-de-400-vis-acier-tete-fraisee-standers-diam-4-mm-x-l-16-mm-82231848.html) | Lot de 400 vis avec un diamètre de la tige de 4 mm |
+| Colle à bois | 50 | 9,90€ | 495 € | [Leroy Merlin](https://www.leroymerlin.fr/produits/peinture-droguerie/colle-et-adhesif/colle/colle-a-bois/colle-a-bois-rapide-axton-500-gr-80104801.html) | |
 
-La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilsiation des machines du type découpeuse laser.
+Ce qui nous donne un total de **337 076 €** à débourser pour concevoir 5000 unités. Quant au prix unitaire celui-ci reviens donc à **67,42 €**.
+
+A noter que l'on utlise ici des revendeurs officiels sauf pour le bandeau de LED introuvable sur ce genre de site. 
+De plus certains prix pourrait être revu à la baisse en faisant de l'optimisation (nottament avec l'espace lié à la découpeuse laser). 
+Les prix peuvent également être négocié étant donné l'achat de groupe conséquent fait pour 5000 unités et que les sites actuels ne prennent pas en compte.
+
+La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisation des machines du type découpeuse laser ou encore la main d'oeuvre pour l'assemblage de l'ensemble.
 
 
 ## Estimation du cout des certifications
@@ -169,7 +176,11 @@ Dans cette optique nous avons décidé de créer une seconde application Android
 
 ## Problèmes rencontrés
 
-(à rédiger)
+Lors de la réalisation de ce projet différents problèmes se sont confrontés à nous. 
+
+Dès le début du projet nous avons rencontré un problème lié à la limitation de l'utilisation de la caméra embarqué sur notre kit Arduino. Nous nous sommes rendus compte qu'il est difficile de l'utiliser en temps réel. De plus afin d'afficher l'image celle-ci est renvoyé sous forme d'une immense chaine de caractères pouvant faire à la fois planter l'Arduino, notre PC ou encore le logiciel Arduino IDE ainsi que le programme Python servant à l'affichage.
+
+Un second problème sous forme de limitation hardware s'est également présenté avec l'introduction d'un bandeau de LED. En effet l'Arduino ne dispose que de tensions de 3,3V, il faut donc veiller à utiliser des capteurs fonctionnant avec cette tension (qui est d'habitude de l'ordre de 5V). Face à ce problème nous avons dans un premier temps essayé de faire un PCB permettant d'alimenter le bandeau de LED directement avec l'alimentation (partie puissance) et le controler par la suite avec l'Arduino (partie contrôle). Cependant cette solution n'a pas fonctionné car nous avons eu besoin d'un composant permettant de faire passer la commande de contrôle de l'Arduino de 3,3V à 5V (leveler shifter). En plus de rendre le système un peu plus complexe, nous n'avions tout simplement pas ce composant à disposition.
 
 
 ## Nombre de lignes de code développé
