@@ -84,7 +84,7 @@ Afin de mener à bien ce projet nous avons utilisé différents éléments qui s
   - un capteur faisant office d'accéléromètre, magnétomètre et gyroscope : non utilisé dans notre projet car le boitier sera fixé.
   - un capteur de proximité : non utilisé car son utilisation est limitée dans le cadre de notre projet.
   - un microphone omnidirentionnel : non utilisé pour l'instant mais qui pourra être intégré plus tard.
-- Un [Grove buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/) permettant de jouer des sons.
+- Un [Grove buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/) piézo permettant de jouer des sons.
 - Un [Grove PIR sensor](https://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/) afin de détecter la présence d'une personne.
 - Un [Grove bouton](https://wiki.seeedstudio.com/Grove-Button/) qui a pour but de vérifier que le boitier est bien fixé au mur.
 - Un bandeau de LED addressables WS2812B permettant un retour d'informations visuelles
@@ -97,8 +97,6 @@ D'autres éléments sont également utilisés comme :
 
 
 ## Estimation de la BOM de notre produit
-
-(à rédiger - basé sur 5000 unités produites)
 
 La BOM est la liste compète de toutes les pièces et matières utilisée afin de fabriquer ce produit. Pour la réaliser, on se base sur une estimation de production de l'ordre de 5000 unités produites. On dresse alors le tableau suivant :
 
@@ -127,6 +125,8 @@ La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisa
 ## Estimation du cout des certifications
 
 (à rédiger)
+Certifications CEM ? 
+Normes vis à vis des alarmes ? Son ?
 
 
 ## Implémentation logiciel embarqué de l'objet défini
@@ -157,6 +157,20 @@ La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisa
 ## Estimation de la durée de vie de l'objet
 
 (à rédiger)
+
+Le produit étant constitué de bois et d'éléments électronique sont utilisation dépend principalement de son environnement. L'alarme ici créé est destiné à être disposé en intérieur limitant les facteurs de température et humidité auquel il peut est soumis. Par conséquent ses principales limitations seront celles liées au matériel et son utilisation. 
+
+A titre d'indication voici quelques unes des limites : 
+- La carte Arduino qui supporte un nombre d'écriture en EEPROM de l'ordre de 10 000 fois et en flash de l'ordre de 100 000 fois. 
+- Les LED
+
+Les autres éléments présents dans le système (buzzer, capteur de proximité, ...) ont également une durée de vie mais non spécifié malgrés les documentations techniques et les recherches sur internet. On peut tout de même remarquer que :
+- Plus le buzzer sera utilisé dans le temps, plus la tension qu'il peut admettre diminuera et donc par conséquent le bruit qu'il peut émettre peut diminuer.
+- Le capteur de proximité peut, dans le temps, avoir une dérive de l'ordre de ±2% par année dans sa mesure et peut donc dans le temps être moins précis.
+
+On notera que dû à la simplicité du système, l'utilisateur et rapidement et simplement changer un composant en cas de problème.
+
+(continuer à rédiger)
 
 
 ## Analyse du cycle de vie du produit (ACV)
