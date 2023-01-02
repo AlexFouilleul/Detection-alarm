@@ -24,12 +24,16 @@ Dans le cas d'une alarme, le prix des produits des concurrents peut très vite m
 
 <p align="center">
   <img src="Images/Alarm_PowerMaster.jpg" width="500">
+  <br>
+  <u>Alarme classique : PowerMaster Kit4</u>
 </p>
 
 Un autre type de système tout aussi intéréssant sur lequel on peut se pencher sont les centrales domotiques tel que la [Gateway Xiaomi](https://xifrance.com/product/xiaomi-gateway-v3/). Ce genre de produit repose sur la même approche que les alarmes avec une centrale intérieure et un ensemble de capteurs qui s'y connecte en utilisant différents protocoles tel que le Wifi (pour piloter la centrale à distance), ainsi que le Bluetooth et le Zigbee pour se connecter aux capteurs. Ce type de système peut être utilisé comme une alarme d'appoint et dispose de nombreux avantages qui seront énumérés plus bas dans ce compte rendu.
 
 <p align="center">
   <img src="Images/Gateway_Xiaomi.png" width="400">
+  <br>
+  <u>Centrale domotique : Xiaomi Mijia Gateway V3</u>
 </p>
 
 Avec les quelques séances de projet dont nous disposons, nous avons fait le choix de mélanger les deux types d'alarme vu précédemment et de concevoir un boitier unique disposant de l'ensemble des capteurs dont nous avons besoin. Cette solution nous permettra de développer rapidement le système et le tester tout en pouvant toucher aux différents aspects de ce projet et respecter des contraintes de ressources et de coûts.
