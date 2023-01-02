@@ -47,6 +47,15 @@ Afin de le mettre en place il faut donc les éléments suivants :
 
 Le but étant de placer le boitier à une distance relativement haute afin qu'il ne puisse être atteint trop rapidement.
 
+### Fonctionnalités
+
+(lister fonctionnalités)
+
+
+### Echange d'informations
+
+(ajouter schéma d'échange d'infos)
+
 
 ## Sécurité globale
 
@@ -116,13 +125,13 @@ D'autres éléments sont également utilisés comme :
 
 (à rédiger)
 
+
 ## Analyse du cycle de vie du produit (ACV)
 
 (à rédiger)
 
-## Recherche et analyse des produits concurrents
 
-(à rédiger sous forme d'une grille avantages/inconvénients)
+## Recherche et analyse des produits concurrents
 
 Dans cette partie nous comparons les différents produits vis à vis du notre. L'idée n'est pas de cibler un produit en particulier mais plutot une gamme de produit afin d'éviter d'avoir un tableau redondant étant donné qu'ils existent de nombreuses alarme à détection et qu'elles se valent toutes plus ou moins dans les grandes lignes.
 
@@ -141,9 +150,13 @@ Cette application nous a donc été très utile cependant elle ne dispose pas d'
 
 Dans cette optique nous avons décidé de créer une seconde application Android qui serait spécifiquement dédié au projet. Cette application serait basique mais permettrait de mettre en forme les informations et communiquer avec les services Bluetooth dont dispose le système. N'ayant pas de connaissances particulières sur le développement d'application sous Android nous avons fait le choix de développer sous [MIT App Inventor](https://appinventor.mit.edu/). 
 
-## Nombre de lignes de code développé
 
-(à rédiger en spécifiant les outils utilisés)
+## Problèmes rencontrés
+
+(à rédiger)
+
+
+## Nombre de lignes de code développé
 
 Afin de mettre à bien ce projet nous avons rédigé 112 lignes de code en C sous l'IDE Arduino. Afin de réduire ce nombre de ligne de code nous avons utilisé des librairies déjà concu et permettant de grandement gagner du temps face au peu de temps dont nous disposons. 
 
