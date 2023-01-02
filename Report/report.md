@@ -20,8 +20,6 @@ A noter que pour avoir un bref apercu du projet nous avons rédigé, en anglais,
 
 ## Analyse rapide du marché
 
-(à rédiger - vis à vis des produits commerciaux concurrents)
-
 Dans le cas d'une alarme, le prix des produits des concurrents peut très vite monter. Cela s'explique avant tout par les produits que ceux-ci propose (avec une centrale intérieure/extérieure ainsi que un ensemble de capteurs tels que des capteurs d'ouvertures de portes ou de détection de présence). En se référent au site de [Leroy Merlin](https://www.leroymerlin.fr/produits/electricite-domotique/alarme-telesurveillance/alarme-maison/alarme-maison-sans-fil/) on peut très vite se rendre compte des prix allant d'une centraine d'euros jusqu'au millier d'euros. A noter que ce genre d'alarme  est en général très robuste avec des équipments robuste résistant au temps. Elles sont donc pensées pour une durée de vie de plusieurs dizaines d'années avec en général et une sécurité et fiabilité relativement élevées.
 
 <p align="center">
@@ -49,12 +47,19 @@ Le but étant de placer le boitier à une distance relativement haute afin qu'il
 
 ### Fonctionnalités
 
-(lister fonctionnalités)
-
-
-### Echange d'informations
-
-(ajouter schéma d'échange d'infos)
+Le système ainsi installé est capable de réaliser les fonctionnalités suivantes :
+- Détection de personnes avec un angle de 120 degrés à une distance maximum de 6 mètres.
+- Retourne d'informations avec un effet de lumière grâce au bandeau de LED :
+  - Lumière totalement bleu = le système est connecté au Bluetooth et l'alarme est innactive.
+  - Lumière bleu au centre et rouge aux extrémitésé = le système est connecté au Bluetooth et l'alarme sera active après déconnexion.
+  - Lumière rouge avec pulsations = le système a détecté quelqu'un et l'alarme sonne.
+- Détection de fixation au mur. Si une personne décroche le système du mur, l'alarme le détecte et sonne.
+- Communication Bluetooth basse consommation.
+- Peu couteux
+- Controlable avec une application Android permettant de :
+  - Activer/désactiver l'alarme.
+  - Voir combien de personnes ont été détectées.
+  - Voir l'historique des détections.
 
 
 ## Sécurité globale
@@ -127,7 +132,8 @@ La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisa
 
 ## Format des messages échangés
 
-(à rédiger)
+(ajouter schéma d'échange d'infos)
+
 
 ## Définition du logiciel embarqué de l'objet
 
@@ -173,6 +179,8 @@ Cette application nous a donc été très utile cependant elle ne dispose pas d'
 
 Dans cette optique nous avons décidé de créer une seconde application Android qui serait spécifiquement dédié au projet. Cette application serait basique mais permettrait de mettre en forme les informations et communiquer avec les services Bluetooth dont dispose le système. N'ayant pas de connaissances particulières sur le développement d'application sous Android nous avons fait le choix de développer sous [MIT App Inventor](https://appinventor.mit.edu/). 
 
+(continuer de développer la partie app + intégrer capture d'écran)
+
 
 ## Problèmes rencontrés
 
@@ -180,7 +188,9 @@ Lors de la réalisation de ce projet différents problèmes se sont confrontés 
 
 Dès le début du projet nous avons rencontré un problème lié à la limitation de l'utilisation de la caméra embarqué sur notre kit Arduino. Nous nous sommes rendus compte qu'il est difficile de l'utiliser en temps réel. De plus afin d'afficher l'image celle-ci est renvoyé sous forme d'une immense chaine de caractères pouvant faire à la fois planter l'Arduino, notre PC ou encore le logiciel Arduino IDE ainsi que le programme Python servant à l'affichage.
 
-Un second problème sous forme de limitation hardware s'est également présenté avec l'introduction d'un bandeau de LED. En effet l'Arduino ne dispose que de tensions de 3,3V, il faut donc veiller à utiliser des capteurs fonctionnant avec cette tension (qui est d'habitude de l'ordre de 5V). Face à ce problème nous avons dans un premier temps essayé de faire un PCB permettant d'alimenter le bandeau de LED directement avec l'alimentation (partie puissance) et le controler par la suite avec l'Arduino (partie contrôle). Cependant cette solution n'a pas fonctionné car nous avons eu besoin d'un composant permettant de faire passer la commande de contrôle de l'Arduino de 3,3V à 5V (leveler shifter). En plus de rendre le système un peu plus complexe, nous n'avions tout simplement pas ce composant à disposition.
+Un second problème sous forme de limitation hardware s'est également présenté avec l'introduction d'un bandeau de LED. En effet l'Arduino ne dispose que de tensions de 3.3V, il faut donc veiller à utiliser des capteurs fonctionnant avec cette tension (qui est d'habitude de l'ordre de 5V). Face à ce problème nous avons dans un premier temps essayé de faire un PCB permettant d'alimenter le bandeau de LED directement avec l'alimentation (partie puissance) et le controler par la suite avec l'Arduino (partie contrôle). Cependant cette solution n'a pas fonctionné car nous avons eu besoin d'un composant permettant de faire passer la commande de contrôle de l'Arduino de 3,3V à 5V (leveler shifter). En plus de rendre le système un peu plus complexe, nous n'avions tout simplement pas ce composant à disposition. Nous avons finalement choisis de retirer tout cela et, sous recommandations du responsable du FABLAB, alimenté directement les LED en 3.3V en faisant attention de limiter l'intensité d'éclairage du bandeau afin de ne pas tirer trop de courant étant donné la puissance que peut fournir l'Arduino.
+
+Enfin un dernier problème que nous avons rencontré concerne l'application que nous avons développé. En effet nous avons remarqué que celle-ci ne fonctionne pas sous Android 13 (version la plus récente à l'heure actuelle) à cause de problème de compatibilité et de limitations de sécurité qu'impose cette version. De plus la librairie incluse dans l'application mets en forme les données dans une forme différente que celles envoyées (confusion entre big-endian et little-endian). Ainsi pour la récéption de données de l'Arduino au téléphone, le code mis en place est en mesure de remettre en forme les données avant affichage sur l'application. Cependant elle n'est pas en mesure d'en faire de même pour l'envoi de données du téléphone vers l'Arduino. Nous n'avons pas trouvé de solutions pour l'instant et pensons que la seule solutions possibles est de faire un traitement du coté de l'Arduino mais qui aurait pour conséquence de grandement alourdir le code présent.
 
 
 ## Nombre de lignes de code développé
