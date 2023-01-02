@@ -127,6 +127,7 @@ La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisa
 (à rédiger)
 Certifications CEM ? 
 Normes vis à vis des alarmes ? Son ?
+https://www.myscutum.fr/quelle-reglementation-alarme-voisinage/#:~:text=La%20r%C3%A9glementation%20du%20signal%20sonore,afin%20d'%C3%A9viter%20les%20confusions.
 
 
 ## Implémentation logiciel embarqué de l'objet défini
@@ -156,13 +157,11 @@ Normes vis à vis des alarmes ? Son ?
 
 ## Estimation de la durée de vie de l'objet
 
-(à rédiger)
-
 Le produit étant constitué de bois et d'éléments électronique sont utilisation dépend principalement de son environnement. L'alarme ici créé est destiné à être disposé en intérieur limitant les facteurs de température et humidité auquel il peut est soumis. Par conséquent ses principales limitations seront celles liées au matériel et son utilisation. 
 
 A titre d'indication voici quelques unes des limites : 
 - La carte Arduino qui supporte un nombre d'écriture en EEPROM de l'ordre de 10 000 fois et en flash de l'ordre de 100 000 fois. 
-- Les LED
+- Les LED WS2812B utilisé dans le bandeau ont une durée de vie de 30 000 heures soit bien assez suffisant au vu de leur faible utilisation.
 
 Les autres éléments présents dans le système (buzzer, capteur de proximité, ...) ont également une durée de vie mais non spécifié malgrés les documentations techniques et les recherches sur internet. On peut tout de même remarquer que :
 - Plus le buzzer sera utilisé dans le temps, plus la tension qu'il peut admettre diminuera et donc par conséquent le bruit qu'il peut émettre peut diminuer.
@@ -176,6 +175,7 @@ On notera que dû à la simplicité du système, l'utilisateur et rapidement et 
 ## Analyse du cycle de vie du produit (ACV)
 
 (à rédiger)
+[utile](https://www.envol-entreprise.fr/acv-lanalyse-du-cycle-de-vie-dun-produit/#:~:text=L'Analyse%20du%20Cycle%20de%20vie%20est%20une%20m%C3%A9thode%20d,d%C3%A9marche%20d'%C3%A9co%2Dconception.)
 
 
 ## Recherche et analyse des produits concurrents
