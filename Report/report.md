@@ -91,6 +91,21 @@ D'autres éléments sont également utilisés comme :
 
 (à rédiger - basé sur 5000 unités produites)
 
+La BOM est la liste compète de toutes les pièces et matières utilisée afin de fabriquer ce produit. Pour la réaliser, on se base sur une estimation de production de l'ordre de 5000 unités produites. On dresse alors le tableau suivant :
+
+| Matériel                          | Quantité | Prix unitaire | Prix de groupe | Revendeur | Remarque                                   |
+| --------------------------------- | -------- | ------------- | -------------- | --------- | ------------------------------------------ |
+| Arduino Tiny Machine Learning Kit | 5000     | ???           | ???            | ???       | ???                                        |
+| Buzzer Grove                      | 5000     | ???           | ???            | ???       | ???                                        |
+| Bouton Grove                      | 5000     | ???           | ???            | ???       | ???                                        |
+| Capteur PIR                       | 5000     | ???           | ???            | ???       | ???                                        |
+| Bandeau LED WS2812B               | 5000     | ???           | ???            | ???       | Densité de ??? LED/m                       |
+| Contreplaqué                      | 5000     | ???           | ???            | ???       | Surface unitaire de ???m² (total = ??? m²) |
+| Chargeur de téléphone             | 5000     | ???           | ???            | ???       | Puissance de 5V et 1,5A                    |
+| Cable micro-USB                   | 5000     | ???           | ???            | ???       | ???                                        |
+
+La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilsiation des machines du type découpeuse laser.
+
 
 ## Estimation du cout des certifications
 
