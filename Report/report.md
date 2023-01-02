@@ -101,8 +101,9 @@ La BOM est la liste compète de toutes les pièces et matières utilisée afin d
 | Capteur PIR                       | 5000     | ???           | ???            | ???       | ???                                        |
 | Bandeau LED WS2812B               | 5000     | ???           | ???            | ???       | Densité de ??? LED/m                       |
 | Contreplaqué                      | 5000     | ???           | ???            | ???       | Surface unitaire de ???m² (total = ??? m²) |
-| Chargeur de téléphone             | 5000     | ???           | ???            | ???       | Puissance de 5V et 1,5A                    |
+| Chargeur de téléphone             | 5000     | ???           | ???            | ???       | Puissance de 5V - 1,5A et longueur 1,5m    |
 | Cable micro-USB                   | 5000     | ???           | ???            | ???       | ???                                        |
+| Vis                               | 15000    | ???           | ???            | ???       | Diamètre de la tige de 4 mm                |
 
 La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilsiation des machines du type découpeuse laser.
 
