@@ -1,9 +1,11 @@
 # Rapport mini-projet IoT
 
-Bachri Anas
+<img src="Images/Logo_polytech.png" width="200" align="right">
+
+Bachri Anas<br>
 Alex Fouilleul 
 
-Polytech Grenoble - IESE5
+Polytech Grenoble - IESE5<br>
 2022 - 2023
 
 <p align="center">
@@ -72,7 +74,7 @@ Un système de ce type peut comporter différents aspects de sécurité.
 
 Tout d'abord l'un des éléments de sécurité peut être l'accés physique au boitier. C'est pour cette raison que nous avons en plus rajouté un bouton poussoire qui permet de vérifier la bonne fixation du boitier sur le mur. Mais cet aspect dépend aussi de l'environnement dans lequel le système est, et surtout de là où celui-ci est placé. Le système reste avant tout un prototype et, qui plus est, fonctionne sur secteur donc à la moindre coupure de courant ou accès à celui-ci une personne pourra potentiellement dégrader le système.
 
-Outre l'aspect sécurité physique, on retrouve aussi l'aspect confidentialité (décrit dans la partie suivante) ainsi que la partie échange de données via un protocole sans fils. A cet effet on retrouve de nombreux articles en lignes evoquant la sécurité des protocoles de communications dont le Bluetooth Basse Consommation dont le site [Vaadata](https://www.vaadata.com/blog/fr/bluetooth-low-energy-securite-objets-connectes/) fait office : `un objet peut être vulnérable à cause soit de failles du standard lui-même, soit d’un mauvais choix parmi les fonctionnalités (notamment au niveau de l’appairage), ou soit d’une mauvaise implémentation du BLE`. Par conséquent nous avons fait attention aux informations échangées et à la manière dont nous avons programmé notre système. C'est par la même occasion que nous en avons profité afin d'ajouter un code PIN permettant de vérouiller les actions sur notre système et éviter que n'importe qui puisse s'y connecter.
+Outre l'aspect sécurité physique, on retrouve aussi l'aspect confidentialité (décrit dans la partie suivante) ainsi que la partie échange de données via un protocole sans fils. A cet effet on retrouve de nombreux articles en lignes evoquant la sécurité des protocoles de communications sur le Bluetooth Basse Consommation (BLE) dont le site [Vaadata](https://www.vaadata.com/blog/fr/bluetooth-low-energy-securite-objets-connectes/) fait office : `un objet peut être vulnérable à cause soit de failles du standard lui-même, soit d’un mauvais choix parmi les fonctionnalités (notamment au niveau de l’appairage), ou soit d’une mauvaise implémentation du BLE`. Par conséquent nous avons fait attention aux informations échangées et à la manière dont nous avons programmé notre système. C'est par la même occasion que nous en avons profité afin d'ajouter un code PIN permettant de vérouiller les actions sur notre système et éviter que n'importe qui puisse s'y connecter.
 
 
 ## Respect de la vie privée (RGPD)
@@ -108,7 +110,6 @@ L'ensemble des composants sont connectés de la manière suivantes :
   <br>
   <i>Schéma de connexion des composants du système</i>
 </p>
-
 
 
 ## Estimation de la BOM de notre produit
