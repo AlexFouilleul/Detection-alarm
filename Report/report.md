@@ -102,9 +102,13 @@ D'autres éléments sont également utilisés comme :
 <u>Remarque :</u> On notera que l'Arduino ne peut fournir qu'une tension de 3,3V.
 
 L'ensemble des composants sont connectés de la manière suivantes : 
-```
-(ajouter schéma de connexion du système)
-```
+
+<p align="center">
+  <img src="Images/PIN_connection.png" width="500">
+  <br>
+  <i>Schéma de connexion des composants du système</i>
+</p>
+
 
 
 ## Estimation de la BOM de notre produit
@@ -163,7 +167,7 @@ Les caractéristiques conçues reposent sur des identifiants uniques (UUID) dér
 Le tout est illustré de la facon suivante :
 
 <p align="center">
-  <img src="Images/Bluetooth_caracteristics.png" width="400">
+  <img src="Images/Bluetooth_caracteristics.png" width="300">
   <br>
   <i>Schéma de l'intégration du Bluetooth du système dans l'Arduino</i>
 </p>
