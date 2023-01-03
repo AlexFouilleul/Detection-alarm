@@ -25,7 +25,7 @@ Dans le cas d'une alarme, le prix des produits des concurrents peut très vite m
 <p align="center">
   <img src="Images/Alarm_PowerMaster.jpg" width="500">
   <br>
-  <u>Alarme classique : PowerMaster Kit4</u>
+  <i>Alarme classique : PowerMaster Kit4</i>
 </p>
 
 Un autre type de système tout aussi intéréssant sur lequel on peut se pencher sont les centrales domotiques tel que la [Gateway Xiaomi](https://xifrance.com/product/xiaomi-gateway-v3/). Ce genre de produit repose sur la même approche que les alarmes avec une centrale intérieure et un ensemble de capteurs qui s'y connecte en utilisant différents protocoles tel que le Wifi (pour piloter la centrale à distance), ainsi que le Bluetooth et le Zigbee pour se connecter aux capteurs. Ce type de système peut être utilisé comme une alarme d'appoint et dispose de nombreux avantages qui seront énumérés plus bas dans ce compte rendu.
@@ -33,7 +33,7 @@ Un autre type de système tout aussi intéréssant sur lequel on peut se pencher
 <p align="center">
   <img src="Images/Gateway_Xiaomi.png" width="400">
   <br>
-  <u>Centrale domotique : Xiaomi Mijia Gateway V3</u>
+  <i>Centrale domotique : Xiaomi Mijia Gateway V3</i>
 </p>
 
 Avec les quelques séances de projet dont nous disposons, nous avons fait le choix de mélanger les deux types d'alarme vu précédemment et de concevoir un boitier unique disposant de l'ensemble des capteurs dont nous avons besoin. Cette solution nous permettra de développer rapidement le système et le tester tout en pouvant toucher aux différents aspects de ce projet et respecter des contraintes de ressources et de coûts.
@@ -68,7 +68,11 @@ Le système ainsi installé est capable de réaliser les fonctionnalités suivan
 
 ## Sécurité globale
 
-(à rédiger)
+Un système de ce type peut comporter différents aspects de sécurité.
+
+Tout d'abord l'un des éléments de sécurité peut être l'accés physique au boitier. C'est pour cette raison que nous avons en plus rajouté un bouton poussoire qui permet de vérifier la bonne fixation du boitier sur le mur. Mais cet aspect dépend aussi de l'environnement dans lequel le système est, et surtout de là où celui-ci est placé. Le système reste avant tout un prototype et, qui plus est, fonctionne sur secteur donc à la moindre coupure de courant ou accès à celui-ci une personne pourra potentiellement dégrader le système.
+
+Outre l'aspect sécurité physique, on retrouve aussi l'aspect confidentialité (décrit dans la partie suivante) ainsi que la partie échange de données via un protocole sans fils. A cet effet on retrouve de nombreux articles en lignes evoquant la sécurité des protocoles de communications dont le Bluetooth Basse Consommation dont le site [Vaadata](https://www.vaadata.com/blog/fr/bluetooth-low-energy-securite-objets-connectes/) fait office. On cite : "`un objet peut être vulnérable à cause soit de failles du standard lui-même, soit d’un mauvais choix parmi les fonctionnalités (notamment au niveau de l’appairage), ou soit d’une mauvaise implémentation du BLE`". Par conséquent nous avons fait attention aux informations échangées et à la manière dont nous avons programmé notre système. C'est par la même occasion que nous en avons profité afin d'ajouter un code PIN permettant de vérouiller les actions sur notre système et éviter que n'importe qui puisse s'y connecter.
 
 
 ## Respect de la vie privée (RGPD)
@@ -192,12 +196,31 @@ Dans cette partie nous comparons les différents produits vis à vis du notre. L
 ## Intégrations effectuées
 
 Afin de communiquer avec le système une première intégration a été mise en place à travers l'application "[LightBlue® - Bluetooth Low Energy](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1)" disponible seuelement Google Play Store pour les téléphones Android. 
-Cette application permet de se connecter à n'importe quel appareil utilisant le protocole Bluetooth Low Energy. Grâce à celle-ci nous sommes donc en mesure de détecter le ou les services Bluetooth que propose le système. Elle a été spécifiquement concu pour les développeurs, ainsi pour chaque service on peut venir lire, écrire ou être notifié en fonction de comment le service a été défini dans le code auparavant. De plus on peut gérer l'envoi sous différentes forme (binaire, hexa, caractère, signed/unsigned ou encore little/big endian). 
+Cette application permet de se connecter à n'importe quel appareil utilisant le protocole Bluetooth Low Energy. Grâce à celle-ci nous sommes donc en mesure de détecter le ou les services Bluetooth que propose le système. Elle a été spécifiquement concu pour les développeurs, ainsi pour chaque service on peut venir lire, écrire ou être notifié en fonction de comment le service a été défini dans le code auparavant. De plus on peut gérer l'envoi sous différentes forme (binaire, hexa, caractère, signed/unsigned ou encore little/big endian). Ci-dessous des captures d'écran de l'application illustrant nos propos.
+
+<p align="center">
+  <img src="Images/LB_screenshot1.jpg" width="200">
+  <img src="Images/LB_screenshot2.jpg" width="200">
+  <img src="Images/LB_screenshot4.jpg" width="200">
+  <img src="Images/LB_screenshot5.jpg" width="200">
+  <br>
+  <i>Captures d'écran de l'application LightBlue avec notre système (services, lectures et écriture)</i>
+</p>
+
 Cette application nous a donc été très utile cependant elle ne dispose pas d'une interface claire et lisible pour un utilisateur lambda. 
 
-Dans cette optique nous avons décidé de créer une seconde application Android qui serait spécifiquement dédié au projet. Cette application serait basique mais permettrait de mettre en forme les informations et communiquer avec les services Bluetooth dont dispose le système. N'ayant pas de connaissances particulières sur le développement d'application sous Android nous avons fait le choix de développer sous [MIT App Inventor](https://appinventor.mit.edu/). 
+Dans cette optique nous avons décidé de créer une seconde application Android qui serait spécifiquement dédié au projet. Cette application serait basique mais permettrait de mettre en forme les informations et communiquer avec les services Bluetooth dont dispose le système. N'ayant pas de connaissances particulières sur le développement d'application sous Android nous avons fait le choix de développer sous [MIT App Inventor](https://appinventor.mit.edu/). L'application se présente donc sous la forme suivante : 
 
-(continuer de développer la partie app + intégrer capture d'écran)
+<p align="center">
+  <img src="Images/DA_screenshot1.jpg" width="200">
+  <img src="Images/DA_screenshot3.jpg" width="200">
+  <img src="Images/DA_screenshot4.jpg" width="200">
+  <img src="Images/DA_screenshot5.jpg" width="200">
+  <br>
+  <i>Captures d'écran de l'application développé pour notre système (démarrage, en attente, connecté, à propos)</i>
+</p>
+
+On retrouve différents éléments consituant l'application dont un bouton en son centre permettant d'activer/désactiver l'alarme lors de son appui. Elle dispose également d'une barre de navigation en bas avec différents boutons permettant de sélectionner l'appareil sur lequel se connecter ainsi qu'un bouton permettant de voir l'historique des détections et enfin un bouton relatif aux informations de l'applications.
 
 
 ## Problèmes rencontrés
@@ -218,3 +241,12 @@ Afin de mettre à bien ce projet nous avons rédigé 112 lignes de code en C sou
 Concernant l'application développé sous MIT App Inventor celle-ci ne fonctionne pas sous forme de ligne de code mais sous forme de blocs à empiler (façon Scratch). Par conséquent il est difficile de quantifier le travail réalisé mais nous avons cependant essayé de faire des blocs génériques afin qu'ils puissent facilement s'adapter aux services Bluetooth dont nous disposons. Cette démarche nous a ainsi permis de gagner du temps là encore.
 
 L'ensemble du code est disponible dans les répertoires [Arduino](https://github.com/AlexFouilleul/Detection-alarm/tree/main/Arduino) et [Application](https://github.com/AlexFouilleul/Detection-alarm/tree/main/Application). 
+
+Les ressources utilisées pendant ce projet sont quant à elles disponibles [ici](https://github.com/AlexFouilleul/Detection-alarm/blob/main/Report/resources.md).
+
+
+## Conclusion
+
+Ce projet a été pour nous l'occasion de développer de nouvelles compétences dont la mise en place d'un système comme celui-ci, sa communication en Bluetooth ainsi que sa mise en forme avec un boitier réalisé à la découpeuse laser. 
+
+(à développer)
