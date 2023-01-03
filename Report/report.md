@@ -72,12 +72,14 @@ Un système de ce type peut comporter différents aspects de sécurité.
 
 Tout d'abord l'un des éléments de sécurité peut être l'accés physique au boitier. C'est pour cette raison que nous avons en plus rajouté un bouton poussoire qui permet de vérifier la bonne fixation du boitier sur le mur. Mais cet aspect dépend aussi de l'environnement dans lequel le système est, et surtout de là où celui-ci est placé. Le système reste avant tout un prototype et, qui plus est, fonctionne sur secteur donc à la moindre coupure de courant ou accès à celui-ci une personne pourra potentiellement dégrader le système.
 
-Outre l'aspect sécurité physique, on retrouve aussi l'aspect confidentialité (décrit dans la partie suivante) ainsi que la partie échange de données via un protocole sans fils. A cet effet on retrouve de nombreux articles en lignes evoquant la sécurité des protocoles de communications dont le Bluetooth Basse Consommation dont le site [Vaadata](https://www.vaadata.com/blog/fr/bluetooth-low-energy-securite-objets-connectes/) fait office. On cite : "`un objet peut être vulnérable à cause soit de failles du standard lui-même, soit d’un mauvais choix parmi les fonctionnalités (notamment au niveau de l’appairage), ou soit d’une mauvaise implémentation du BLE`". Par conséquent nous avons fait attention aux informations échangées et à la manière dont nous avons programmé notre système. C'est par la même occasion que nous en avons profité afin d'ajouter un code PIN permettant de vérouiller les actions sur notre système et éviter que n'importe qui puisse s'y connecter.
+Outre l'aspect sécurité physique, on retrouve aussi l'aspect confidentialité (décrit dans la partie suivante) ainsi que la partie échange de données via un protocole sans fils. A cet effet on retrouve de nombreux articles en lignes evoquant la sécurité des protocoles de communications dont le Bluetooth Basse Consommation dont le site [Vaadata](https://www.vaadata.com/blog/fr/bluetooth-low-energy-securite-objets-connectes/) fait office : `un objet peut être vulnérable à cause soit de failles du standard lui-même, soit d’un mauvais choix parmi les fonctionnalités (notamment au niveau de l’appairage), ou soit d’une mauvaise implémentation du BLE`. Par conséquent nous avons fait attention aux informations échangées et à la manière dont nous avons programmé notre système. C'est par la même occasion que nous en avons profité afin d'ajouter un code PIN permettant de vérouiller les actions sur notre système et éviter que n'importe qui puisse s'y connecter.
 
 
 ## Respect de la vie privée (RGPD)
 
+```
 (à rédiger)
+```
 
 
 ## Architecture matérielle de l'objet
@@ -91,13 +93,18 @@ Afin de mener à bien ce projet nous avons utilisé différents éléments qui s
 - Un [Grove buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/) piézo permettant de jouer des sons.
 - Un [Grove PIR sensor](https://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/) afin de détecter la présence d'une personne.
 - Un [Grove bouton](https://wiki.seeedstudio.com/Grove-Button/) qui a pour but de vérifier que le boitier est bien fixé au mur.
-- Un bandeau de LED addressables WS2812B permettant un retour d'informations visuelles
+- Un bandeau de LED addressables WS2812B permettant un retour d'informations visuelles.
 
 D'autres éléments sont également utilisés comme :
 - Une alimentation mise en place à l'aide d'un chargeur de téléphone et un cable micro-USB.
 - Un boitier concu à l'aide d'une découpeuse laser et d'une plaque de contreplaqué de 3 mm.
 
 <u>Remarque :</u> On notera que l'Arduino ne peut fournir qu'une tension de 3,3V.
+
+L'ensemble des composants sont connectés de la manière suivantes : 
+```
+(ajouter schéma de connexion du système)
+```
 
 
 ## Estimation de la BOM de notre produit
@@ -128,35 +135,61 @@ La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisa
 
 ## Estimation du cout des certifications
 
+```
 (à rédiger)
 Certifications CEM ? 
 Normes vis à vis des alarmes ? Son ?
 https://www.myscutum.fr/quelle-reglementation-alarme-voisinage/#:~:text=La%20r%C3%A9glementation%20du%20signal%20sonore,afin%20d'%C3%A9viter%20les%20confusions.
+```
 
 
 ## Implémentation logiciel embarqué de l'objet défini
 
+```
 (à rédiger)
+```
 
 
 ## Format des messages échangés
 
-(ajouter schéma d'échange d'infos)
+Le Bluetooth Basse Consommation (BLE) est un dérivé du Bluetooth utilisé pour les objets connectés et ayant une consommation bien plus faible. Le protocole d’échange est différent d’une connexion Bluetooth classique car il propose des services utilisant un ou des identifiants uniques (nommé caractéristiques) pour les reconnaître.
+
+Le modèle d'Arduino mis à notre disposition est capable d’utiliser le BLE. Nous l’avons alors paramétré de façon à contenir un service avec trois caractéristiques permettant l'échanges d'informations dont chaque service permet de :
+- envoyer le nombre de personnes détectées.
+- activer/désactiver l'alarme.
+- rentrer le code PIN du système. 
+Les caractéristiques conçues reposent sur des identifiants uniques (UUID) dérivés de l'identifiant principal de notre Arduino. Afin d'obtenir un identifiant de ce genre pour notre Arduino on peut utiliser des générateurs d'UUID en ligne comme [celui-ci](https://www.uuidgenerator.net/).
+
+Le tout est illustré de la facon suivante :
+
+<p align="center">
+  <img src="Images/Bluetooth_caracteristics.png" width="400">
+  <br>
+  <i>Schéma de l'intégration du Bluetooth du système dans l'Arduino</i>
+</p>
+
+Les informations échangées par la communication Bluetooth sont du type unsigned little-endian.
 
 
 ## Définition du logiciel embarqué de l'objet
 
+```
 (à rédiger)
+```
 
 
 ## Métriques du logiciel embarqué
 
+```
 (à rédiger)
+```
 
 
 ## Mesure des temps d'éxécution des phases d'éxécution
 
+```
 (à rédiger)
+```
 
 
 ## Estimation de la durée de vie de l'objet
@@ -173,13 +206,17 @@ Les autres éléments présents dans le système (buzzer, capteur de proximité,
 
 On notera que dû à la simplicité du système, l'utilisateur et rapidement et simplement changer un composant en cas de problème.
 
+```
 (continuer à rédiger)
+```
 
 
 ## Analyse du cycle de vie du produit (ACV)
 
+```
 (à rédiger)
 [utile](https://www.envol-entreprise.fr/acv-lanalyse-du-cycle-de-vie-dun-produit/#:~:text=L'Analyse%20du%20Cycle%20de%20vie%20est%20une%20m%C3%A9thode%20d,d%C3%A9marche%20d'%C3%A9co%2Dconception.)
+```
 
 
 ## Recherche et analyse des produits concurrents
@@ -249,4 +286,6 @@ Les ressources utilisées pendant ce projet sont quant à elles disponibles [ici
 
 Ce projet a été pour nous l'occasion de développer de nouvelles compétences dont la mise en place d'un système comme celui-ci, sa communication en Bluetooth ainsi que sa mise en forme avec un boitier réalisé à la découpeuse laser. 
 
+```
 (à développer)
+```
