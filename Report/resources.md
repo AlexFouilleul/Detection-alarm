@@ -32,3 +32,7 @@ Vous trouverez ici une liste des éléments qui nous ont été utiles à la cré
 - [Tuto1](https://openlab.utbm.fr/docs/faire-une-boite/)
 - [Tuto2](https://e-square.marche.be/wp-content/uploads/2020/05/Inkscape-pour-la-d%C3%A9coupe-laser.pdf)
 - [Tuto3](https://edutechwiki.unige.ch/fr/Inkscape_pour_la_d%C3%A9coupe_et_la_gravure_laser)
+
+
+## Autre
+- [Syntaxe](https://docs.github.com/fr/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#supported-color-models)
