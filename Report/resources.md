@@ -14,7 +14,7 @@ Vous trouverez ici une liste des éléments qui nous ont été utiles à la cré
 
 - [Camera](https://tinyml.seas.harvard.edu/assets/other/4D/22.03.11_Marcelo_Rovai_Handout.pdf)
 - [Machine Vision](https://blog.arduino.cc/2020/06/24/machine-vision-with-low-cost-camera-modules/)
-- [Blueooth](https://www.arduino.cc/reference/en/libraries/arduinoble/)
+- [Bluetooth](https://www.arduino.cc/reference/en/libraries/arduinoble/)
 - [LED](https://arduino.stackexchange.com/questions/80323/how-do-i-control-the-onboard-leds-of-my-arduino-nano-33-ble-sense)
 - [Générateur UUID](https://www.uuidgenerator.net/)
 
