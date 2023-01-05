@@ -214,7 +214,7 @@ Les autres éléments présents dans le système (buzzer, capteur de proximité,
 - Plus le buzzer sera utilisé dans le temps, plus la tension qu'il peut admettre diminuera et donc par conséquent le bruit qu'il peut émettre peut diminuer.
 - Le capteur de proximité peut, dans le temps, avoir une dérive de l'ordre de ±2% par année dans sa mesure et peut donc dans le temps être moins précis.
 
-On notera que dû à la simplicité du système, l'utilisateur et rapidement et simplement changer un composant en cas de problème.
+On notera que dû à la simplicité du système, l'utilisateur peut rapidement et simplement changer un composant en cas de problème.
 
 ```
 (continuer à rédiger)
