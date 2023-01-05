@@ -242,7 +242,7 @@ Dans cette partie nous comparons les différents produits vis à vis du notre. L
 
 ## Intégrations effectuées
 
-Afin de communiquer avec le système une première intégration a été mise en place à travers l'application "[LightBlue® - Bluetooth Low Energy](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1)" disponible seuelement Google Play Store pour les téléphones Android. 
+Afin de communiquer avec le système une première intégration a été mise en place à travers l'application "LightBlue® - Bluetooth Low Energy" disponible sur le [Google Play Store](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1) pour les téléphones Android et également sur l'[Apple App Store](https://apps.apple.com/fr/app/lightblue/id557428110?platform=iphone) pour les iPhone. 
 Cette application permet de se connecter à n'importe quel appareil utilisant le protocole Bluetooth Low Energy. Grâce à celle-ci nous sommes donc en mesure de détecter le ou les services Bluetooth que propose le système. Elle a été spécifiquement concu pour les développeurs, ainsi pour chaque service on peut venir lire, écrire ou être notifié en fonction de comment le service a été défini dans le code auparavant. De plus on peut gérer l'envoi sous différentes forme (binaire, hexa, caractère, signed/unsigned ou encore little/big endian). Ci-dessous des captures d'écran de l'application illustrant nos propos.
 
 <p align="center">
