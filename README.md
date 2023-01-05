@@ -36,7 +36,7 @@ For more informations, please take a look at the [report](https://github.com/Ale
 - Ligthstrip (8*LED WS2812B) 
 
 ### Software
-- "[LightBlue® - Bluetooth Low Energy](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1)" available on the Google Play Store<br>
+- "[LightBlue® - Bluetooth Low Energy](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1)" available on the Google Play Store and Apple App Store<br>
 or
 - "[Detection alarm](https://github.com/AlexFouilleul/Detection-alarm/blob/main/Application/Detection_alarm.apk)" application available in this repository
 
