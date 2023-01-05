@@ -136,7 +136,8 @@ La BOM est la liste compète de toutes les pièces et matières utilisée afin d
 Ce qui nous donne un total de **337 076 €** à débourser pour concevoir 5000 unités. Quant au prix unitaire celui-ci reviens donc à **67,42 €**.
 
 A noter que l'on utlise ici des revendeurs officiels sauf pour le bandeau de LED introuvable sur ce genre de site. 
-De plus certains prix pourrait être revu à la baisse en faisant de l'optimisation (nottament avec l'espace lié à la découpeuse laser). 
+De plus certains prix pourrait être revu à la baisse en faisant de l'optimisation (nottament avec l'espace lié à la découpeuse laser).
+Etant donné que l'on utilise pas la caméra présente sur le kit, on pourrait aussi commander seulement l'[Arduino Nano 33 BLE](https://store.arduino.cc/products/arduino-nano-33-ble) (en version non *sense*) permettant d'économiser 27€ sur chaque unité !
 Les prix peuvent également être négocié étant donné l'achat de groupe conséquent fait pour 5000 unités et que les sites actuels ne prennent pas en compte.
 
 La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisation des machines du type découpeuse laser ou encore la main d'oeuvre pour l'assemblage de l'ensemble.
