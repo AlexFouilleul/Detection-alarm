@@ -97,12 +97,6 @@ Afin de mener à bien ce projet nous avons utilisé différents éléments qui s
 - Un [Grove bouton](https://wiki.seeedstudio.com/Grove-Button/) qui a pour but de vérifier que le boitier est bien fixé au mur.
 - Un bandeau de LED addressables WS2812B permettant un retour d'informations visuelles.
 
-D'autres éléments sont également utilisés comme :
-- Une alimentation mise en place à l'aide d'un chargeur de téléphone et un cable micro-USB.
-- Un boitier concu à l'aide d'une découpeuse laser et d'une plaque de contreplaqué de 3 mm.
-
-<u>Remarque :</u> On notera que l'Arduino ne peut fournir qu'une tension de 3,3V.
-
 L'ensemble des composants sont connectés de la manière suivantes : 
 
 <p align="center">
@@ -110,6 +104,16 @@ L'ensemble des composants sont connectés de la manière suivantes :
   <br>
   <i>Schéma de connexion des composants du système</i>
 </p>
+
+<u>Remarque :</u> On notera que l'Arduino ne peut fournir qu'une tension de 3,3V.
+
+D'autres éléments sont également utilisés comme :
+- Une alimentation mise en place à l'aide d'un chargeur de téléphone et un cable micro-USB.
+- Un boitier concu à l'aide d'une découpeuse laser et d'une plaque de contreplaqué de 3 mm.
+
+```
+Insérer photo du boitier
+```
 
 
 ## Estimation de la BOM de notre produit
