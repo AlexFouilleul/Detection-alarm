@@ -269,7 +269,14 @@ On retrouve différents éléments consituant l'application dont un bouton en so
 
 Lors de la réalisation de ce projet différents problèmes se sont confrontés à nous. 
 
-Dès le début du projet nous avons rencontré un problème lié à la limitation de l'utilisation de la caméra embarqué sur notre kit Arduino. Nous avons travaillé autour de ce capteur dans l'ambition de l'intégrer plus tard dans notre système. Cependant lors de nos essais nous nous sommes rendus compte que le résultat obtenu est peu (voir pas) exploitable, la quanlité de la camera laissant grandement à désirer. Celle-ci étant un module de 0,3 MP pouvant gérer différentes résolutions de photos allant de 176 x 144 (QCIF) à 640 x 480 (VGA). Nous n'avons jamais pu tester la dernière résolution de caméra étant donné que notre Arduino ne dispose pas assez de stockage pour contenir l'image. Pour les autres résolutions on obtient des photos floues, peu détaillé à courte ou longue distance et avec une colorimétrie qui tend vers le vert comme en témoignent les photos ci-dessous.
+Dès le début du projet nous avons rencontré un problème lié à la limitation de l'utilisation de la caméra embarqué sur notre kit Arduino. Nous avons travaillé autour de ce capteur dans l'ambition de l'intégrer plus tard dans notre système. Cependant lors de nos essais nous nous sommes rendus compte que le résultat obtenu est peu (voir pas) exploitable, la quanlité de la camera laissant grandement à désirer. Celle-ci étant un module de 0,3 MP pouvant gérer différentes résolutions de photos allant de 176 x 144 (QCIF) à 640 x 480 (VGA). Nous n'avons jamais pu tester la dernière résolution de caméra étant donné que notre Arduino ne dispose pas assez de stockage pour contenir l'image. Pour les autres résolutions on obtient des photos floues, peu détaillées à courte ou longue distance et avec une colorimétrie qui tend vers le vert comme en témoignent les photos ci-dessous.
+
+<p align="center">
+  <img src="Images/Camera_picture1.png" width="305">
+  <img src="Images/Camera_picture2.png" width="300">
+  <br>
+  <i>Images obtenues lors de nos essais avec la caméra OV7675</i>
+</p>
 
 Nous nous sommes rendus compte qu'il est difficile de l'utiliser en temps réel. De plus afin d'afficher l'image celle-ci est renvoyé sous forme d'une immense chaine de caractères pouvant faire à la fois planter l'Arduino, notre PC ou encore le logiciel Arduino IDE ainsi que le programme Python servant à l'affichage.
 
