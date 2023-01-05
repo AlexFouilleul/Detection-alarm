@@ -21,12 +21,10 @@ Detection alarm is a 3rd year engineering school project at Polytech Grenoble in
   - View detection history
   
 
-
 ## 📲 Quick start guide and documentation
 
-(à rédiger)
+For more informations, please take a look at the [report](https://github.com/AlexFouilleul/Detection-alarm/blob/main/Report/report.md) available (FR).
 
-For more informations, please take a look at the report available in French.
 
 ## 💻 Compatible equipments
 
