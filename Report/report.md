@@ -195,11 +195,12 @@ Les informations échangées par la communication Bluetooth sont du type unsigne
 ```
 
 
-## Mesure des temps d'éxécution des phases d'éxécution
+## Mesure des temps des phases d'éxécution
 
-```
-(à rédiger)
-```
+Lors de l'éxécution de notre système nous avons relevé différents temps de mesures pour les principales phases et qui sont les suivantes :
+- **Phase de surveillance :** lors de la surveillance, le système analyse la pièce toutes les 3 secondes. Cette durée est relative au délai minimum d'analyse lié au capteur PIR. 
+- **Phase d'alerte :** lorsque le système a détecté une personne, celui-ci fait fonctionner le buzzer et les LED en faisant varier leur intensité. Le système répéte ainsi 5 cycles ayant chacun un délai d'une seconde ce qui nous donne un temps total de 5 seconde pour cette phase.
+- **Phase de communication Bluetooth :** pour cette phase nous n'avons pas de métrique étant donné que le temps de communication de cette partie dépend de la localisation du boitier vis à vis du smartphone de la personne. Cependant lors de nos essais, l'échange de données s'est avéré être presque instantanée et donc difficile pour nous de mesurer ce temps qui doit être de l'ordre des millisecondes. Le plus long étant finalement la connexion au système car le smartphone récupère différentes propriétés du système (son nom, son fabricant, ses caractéristiques, etc). La connexion au système prend ainsi environ 2 secondes d'après nos essais.
 
 
 ## Estimation de la durée de vie de l'objet
