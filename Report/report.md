@@ -199,9 +199,13 @@ Les informations échangées par la communication Bluetooth sont du type unsigne
 
 ## Métriques du logiciel embarqué
 
-```
-(à rédiger)
-```
+Afin de mettre à bien ce projet nous avons rédigé 112 lignes de code en C sous l'IDE Arduino. Afin de réduire ce nombre de ligne de code nous avons utilisé des librairies déjà concu et permettant de grandement gagner du temps face au peu de temps dont nous disposons. Le projet est assez compact puisque sa taille n'est que de 322 ko soit 32% de l'espace de stockage de programmes de notre carte Aruino. Quant aux variables globales, elles occupent 69 ko soit 29% de mémoire physique dynamique d'après le compilateur.
+
+Concernant l'application développé sous MIT App Inventor celle-ci ne fonctionne pas sous forme de ligne de code mais sous forme de blocs à empiler (façon Scratch). Par conséquent il est difficile de quantifier le travail réalisé mais nous avons cependant essayé de faire des blocs génériques afin qu'ils puissent facilement s'adapter aux services Bluetooth dont nous disposons. Cette démarche nous a ainsi permis de gagner du temps là encore. La taille de l'application dans son état actuel est de 3,57 Mo.
+
+L'ensemble du code est disponible dans les répertoires [Arduino](https://github.com/AlexFouilleul/Detection-alarm/tree/main/Arduino) et [Application](https://github.com/AlexFouilleul/Detection-alarm/tree/main/Application). 
+
+Les ressources utilisées pendant ce projet sont quant à elles disponibles [ici](https://github.com/AlexFouilleul/Detection-alarm/blob/main/Report/resources.md).
 
 
 ## Mesure des temps des phases d'éxécution
@@ -212,23 +216,10 @@ Lors de l'éxécution de notre système nous avons relevé différents temps de 
 - **Phase de communication Bluetooth :** pour cette phase nous n'avons pas de métrique étant donné que le temps de communication de cette partie dépend de la localisation du boitier vis à vis du smartphone de la personne. Cependant lors de nos essais, l'échange de données s'est avéré être presque instantanée et donc difficile pour nous de mesurer ce temps qui doit être de l'ordre des millisecondes. Le plus long étant finalement la connexion au système car le smartphone récupère différentes propriétés du système (son nom, son fabricant, ses caractéristiques, etc). La connexion au système prend ainsi environ 2 secondes d'après nos essais.
 
 
-## Estimation de la durée de vie de l'objet
+## Estimation de la durée de vie de la batterie de l'objet
 
-Le produit étant constitué de bois et d'éléments électronique sont utilisation dépend principalement de son environnement. L'alarme ici créé est destiné à être disposé en intérieur limitant les facteurs de température et humidité auquel il peut est soumis. Par conséquent ses principales limitations seront celles liées au matériel et son utilisation. 
-
-A titre d'indication voici quelques unes des limites : 
-- La carte Arduino qui supporte un nombre d'écriture en EEPROM de l'ordre de 10 000 fois et en flash de l'ordre de 100 000 fois. 
-- Les LED WS2812B utilisé dans le bandeau ont une durée de vie de 30 000 heures soit bien assez suffisant au vu de leur faible utilisation.
-
-Les autres éléments présents dans le système (buzzer, capteur de proximité, ...) ont également une durée de vie mais non spécifié malgrés les documentations techniques et les recherches sur internet. On peut tout de même remarquer que :
-- Plus le buzzer sera utilisé dans le temps, plus la tension qu'il peut admettre diminuera et donc par conséquent le bruit qu'il peut émettre peut diminuer.
-- Le capteur de proximité peut, dans le temps, avoir une dérive de l'ordre de ±2% par année dans sa mesure et peut donc dans le temps être moins précis.
-
-On notera que dû à la simplicité du système, l'utilisateur peut rapidement et simplement changer un composant en cas de problème.
-
-```
-(continuer à rédiger)
-```
+Notre produit étant sur secteur, celui-ci n'est pas sujet à une batterie. 
+On notera tout de même que celui-ci peut-être alimenté par pile mais ce n'est pas une piste que nous avons abordé lors de notre projet.
 
 
 ## Analyse du cycle de vie du produit (ACV)
@@ -299,17 +290,6 @@ Un second problème sous forme de limitation hardware s'est également présent�
 
 
 Enfin un dernier problème que nous avons rencontré concerne l'application que nous avons développé. En effet nous avons remarqué que celle-ci ne fonctionne pas sous Android 13 (version la plus récente à l'heure actuelle) à cause de problème de compatibilité et de limitations de sécurité qu'impose cette version. De plus la librairie incluse dans l'application mets en forme les données dans une forme différente que celles envoyées (confusion entre big-endian et little-endian). Ainsi pour la récéption de données de l'Arduino au téléphone, le code mis en place est en mesure de remettre en forme les données avant affichage sur l'application. Cependant elle n'est pas en mesure d'en faire de même pour l'envoi de données du téléphone vers l'Arduino. Nous n'avons pas trouvé de solutions pour l'instant et pensons que la seule solutions possibles est de faire un traitement du coté de l'Arduino mais qui aurait pour conséquence de grandement alourdir le code présent.
-
-
-## Nombre de lignes de code développé
-
-Afin de mettre à bien ce projet nous avons rédigé 112 lignes de code en C sous l'IDE Arduino. Afin de réduire ce nombre de ligne de code nous avons utilisé des librairies déjà concu et permettant de grandement gagner du temps face au peu de temps dont nous disposons. 
-
-Concernant l'application développé sous MIT App Inventor celle-ci ne fonctionne pas sous forme de ligne de code mais sous forme de blocs à empiler (façon Scratch). Par conséquent il est difficile de quantifier le travail réalisé mais nous avons cependant essayé de faire des blocs génériques afin qu'ils puissent facilement s'adapter aux services Bluetooth dont nous disposons. Cette démarche nous a ainsi permis de gagner du temps là encore.
-
-L'ensemble du code est disponible dans les répertoires [Arduino](https://github.com/AlexFouilleul/Detection-alarm/tree/main/Arduino) et [Application](https://github.com/AlexFouilleul/Detection-alarm/tree/main/Application). 
-
-Les ressources utilisées pendant ce projet sont quant à elles disponibles [ici](https://github.com/AlexFouilleul/Detection-alarm/blob/main/Report/resources.md).
 
 
 ## Conclusion
