@@ -145,21 +145,11 @@ La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisa
 
 ## Estimation du cout des certifications
 
-```
-(à rédiger)
-Certifications CEM ? 
-Normes vis à vis des alarmes ? Son ?
-https://www.myscutum.fr/quelle-reglementation-alarme-voisinage/#:~:text=La%20r%C3%A9glementation%20du%20signal%20sonore,afin%20d'%C3%A9viter%20les%20confusions.
-Norme NF ou CE ?
-```
 Une des certifications qui nous vient à l'esprit pour ce genre de système et en accord avec les cours suivis à Polytech Grenoble, est la compatibilité électromagnétique (CEM) car notre système utilise nottament une communication Bluetooth. D'après le site [Rtone](https://blog.rtone.fr/essais-cem) le coût de cette certification peut se situer ```entre 8k€ et 50k€ dans le domaine de l'IoT```. Le prix exacte de cette certification est difficilement quantifiable sans demander de devis car cela dépend de sa complexité (radio notamment) et aussi selon la quantité de pays ciblés. En fonction de ces différents points l’écart peut être important mais cette phase est obligatoire afin de commercialiser un tel produit.
 
 Pour un produit vendu en France il faut également s'intérésser aux normes NF et CE et qui indique que nous, fabricant, nous nous engageons sa responsabilité sur la conformité du produit à l'ensemble des exigences fixées par la législation françcaise et également de l'Union européenne applicable à ce produit. Pour ce faire il faut réaliser des contrôles et essais qui assurent la conformité du produit aux exigences essentielles définies dans les textes européens concernés. Plus d'informations sont donnés sur le site du [ministère de l'économie et des finances](https://www.economie.gouv.fr/dgccrf/Publications/Vie-pratique/Fiches-pratiques/Le-marquage-CE).
 
-Enfin une autre norme auquel on pourrait penser concerne le bruit que peut émettre l'alarme.
-```
-(continuer de rédiger)
-```
+Enfin une autre norme auquel on pourrait penser concerne le bruit que peut émettre l'alarme. Des réglementations en France impose une limite de puissances sonore des sirènes à 105 décibels et leur durée de fonctionnement à 3 minutes. Le signal sonore quelle émet doit aussi être différent de celui des services d'urgence et de secours (SAMU, pompiers, police, gendarmerie, etc).
 
 
 ## Implémentation logiciel embarqué de l'objet défini
