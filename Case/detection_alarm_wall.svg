@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="detection_alarm_wall.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4790474"
+     inkscape:cx="408.0329"
+     inkscape:cy="325.54738"
+     inkscape:window-width="2400"
+     inkscape:window-height="1261"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill-opacity:0;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
+       id="rect184"
+       width="170"
+       height="210"
+       x="11.05282"
+       y="16.044418"
+       ry="14.070264"
+       inkscape:label="Wall_face" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.27949px;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.206581;stroke-dasharray:none;stroke-opacity:1"
+       x="41.350216"
+       y="26.022423"
+       id="text2462"
+       inkscape:label="Text_name"
+       transform="scale(0.977511,1.0230064)"><tspan
+         sodipodi:role="line"
+         id="tspan2460"
+         style="text-align:end;text-anchor:end;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.206581;stroke-opacity:1"
+         x="41.350216"
+         y="26.022423"
+         transform="matrix(1.1124108,0,0,2.5572896,-2.2126417,-36.083318)"
+         inkscape:label="Name1">Bachri Anas</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:end;text-anchor:end;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.206581;stroke-opacity:1"
+         x="41.350216"
+         y="30.121786"
+         id="tspan2464"
+         inkscape:label="Name2">Fouilleul Alex</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.27949px;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.206581;stroke-dasharray:none;stroke-opacity:1"
+       x="149.78929"
+       y="23.635666"
+       id="text4082"
+       inkscape:label="Text_info"
+       transform="scale(0.977511,1.0230064)"><tspan
+         sodipodi:role="line"
+         id="tspan4078"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.206581;stroke-opacity:1"
+         x="149.78929"
+         y="23.635666"
+         transform="matrix(1.1124108,0,0,2.5572896,-2.2126417,-36.083318)"
+         inkscape:label="IESE">IESE5</tspan><tspan
+         sodipodi:role="line"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.206581;stroke-opacity:1"
+         x="149.78929"
+         y="27.735029"
+         transform="matrix(1.1124108,0,0,2.5572896,-2.2126417,-36.083318)"
+         inkscape:label="Years"
+         id="tspan4142">2022 - 2023</tspan><tspan
+         sodipodi:role="line"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.206581;stroke-opacity:1"
+         x="149.78929"
+         y="31.834391"
+         id="tspan4080"
+         inkscape:label="Polytech">Polytech Grenoble</tspan></text>
+    <rect
+       style="fill-opacity:0;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.208166;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4144"
+       width="11.791833"
+       height="19.791834"
+       x="51.104084"
+       y="136.10408"
+       ry="0"
+       inkscape:label="usb_hole" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.46403px;text-align:end;text-anchor:end;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1"
+       x="141.14735"
+       y="27.211878"
+       id="text550"
+       transform="scale(0.89186526,1.1212456)"><tspan
+         sodipodi:role="line"
+         id="tspan548"
+         style="stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1"
+         x="141.14735"
+         y="27.211878">DETECTION ALARM</tspan></text>
+  </g>
+</svg>
