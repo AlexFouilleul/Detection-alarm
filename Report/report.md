@@ -14,7 +14,7 @@ Polytech Grenoble - IESE5<br>
 
 ## Introduction
 
-Nous avons disposé de quelques séances de TP réalisé au fablab MSTIC de l'UGA. Le but étant de créer un système "évolutif" prenant en compte des capteurs et réalisant une communication sans fils type LoRa ou encore Bluetooth.
+Nous avons disposé de quelques séances de TP réalisées au fablab MSTIC de l'UGA. Le but étant de créer un système "évolutif" prenant en compte des capteurs et réalisant une communication sans fils type LoRa ou encore Bluetooth.
 Dans le cadre de ce projet nous avons choisis un compteur de personnes que nous avons très vite fait évoluer afin d'en faire une alarme de détection.
 
 A noter que pour avoir un bref apercu du projet nous avons rédigé, en anglais, la page [readme.md](https://github.com/AlexFouilleul/Detection-alarm/blob/main/README.md) du dépot. Cependant ce compte rendu sera bien plus complet et expliquera les différents points pris en compte lors du travail autour de ce projet et son étude de cas.
@@ -22,7 +22,7 @@ A noter que pour avoir un bref apercu du projet nous avons rédigé, en anglais,
 
 ## Analyse rapide du marché
 
-Dans le cas d'une alarme, le prix des produits des concurrents peut très vite monter. Cela s'explique avant tout par les produits que ceux-ci propose (avec une centrale intérieure/extérieure ainsi que un ensemble de capteurs tels que des capteurs d'ouvertures de portes ou de détection de présence). En se référent au site de [Leroy Merlin](https://www.leroymerlin.fr/produits/electricite-domotique/alarme-telesurveillance/alarme-maison/alarme-maison-sans-fil/) on peut très vite se rendre compte des prix allant d'une centraine d'euros jusqu'au millier d'euros. A noter que ce genre d'alarme  est en général très robuste avec des équipments robuste résistant au temps. Elles sont donc pensées pour une durée de vie de plusieurs dizaines d'années avec en général et une sécurité et fiabilité relativement élevées.
+Dans le cas d'une alarme, le prix des produits des concurrents peut très vite monter. Cela s'explique avant tout par les produits que ceux-ci proposent (avec une centrale intérieure/extérieure ainsi que un ensemble de capteurs tels que des capteurs d'ouvertures de portes ou de détection de présence). En se référent au site de [Leroy Merlin](https://www.leroymerlin.fr/produits/electricite-domotique/alarme-telesurveillance/alarme-maison/alarme-maison-sans-fil/) on peut très vite se rendre compte des prix allant d'une centraine d'euros jusqu'au millier d'euros. A noter que ce genre d'alarme  est en général très robuste avec des équipements robustes résistant au temps. Elles sont donc pensées pour une durée de vie de plusieurs dizaines d'années avec en général une sécurité et fiabilité relativement élevées.
 
 <p align="center">
   <img src="Images/Alarm_PowerMaster.jpg" width="500">
@@ -30,7 +30,7 @@ Dans le cas d'une alarme, le prix des produits des concurrents peut très vite m
   <i>Alarme classique : PowerMaster Kit4</i>
 </p>
 
-Un autre type de système tout aussi intéréssant sur lequel on peut se pencher sont les centrales domotiques tel que la [Gateway Xiaomi](https://xifrance.com/product/xiaomi-gateway-v3/). Ce genre de produit repose sur la même approche que les alarmes avec une centrale intérieure et un ensemble de capteurs qui s'y connecte en utilisant différents protocoles tel que le Wifi (pour piloter la centrale à distance), ainsi que le Bluetooth et le Zigbee pour se connecter aux capteurs. Ce type de système peut être utilisé comme une alarme d'appoint et dispose de nombreux avantages qui seront énumérés plus bas dans ce compte rendu.
+Un autre type de système tout aussi intéressant sur lequel on peut se pencher sont les centrales domotiques tel que la [Gateway Xiaomi](https://xifrance.com/product/xiaomi-gateway-v3/). Ce genre de produit repose sur la même approche que les alarmes avec une centrale intérieure et un ensemble de capteurs qui s'y connecte en utilisant différents protocoles tels que le Wifi (pour piloter la centrale à distance), ainsi que le Bluetooth et le Zigbee pour se connecter aux capteurs. Ce type de système peut être utilisé comme une alarme d'appoint et dispose de nombreux avantages qui seront énumérés plus bas dans ce compte rendu.
 
 <p align="center">
   <img src="Images/Gateway_Xiaomi.png" width="400">
@@ -38,31 +38,31 @@ Un autre type de système tout aussi intéréssant sur lequel on peut se pencher
   <i>Centrale domotique : Xiaomi Mijia Gateway V3</i>
 </p>
 
-Avec les quelques séances de projet dont nous disposons, nous avons fait le choix de mélanger les deux types d'alarme vu précédemment et de concevoir un boitier unique disposant de l'ensemble des capteurs dont nous avons besoin. Cette solution nous permettra de développer rapidement le système et le tester tout en pouvant toucher aux différents aspects de ce projet et respecter des contraintes de ressources et de coûts.
+Avec les quelques séances de projet dont nous disposons, nous avons fait le choix de mélanger les deux types d'alarme vu précédemment et de concevoir un boîtier unique disposant de l'ensemble des capteurs dont nous avons besoin. Cette solution nous permettra de développer rapidement le système et le tester tout en pouvant toucher aux différents aspects de ce projet et respecter des contraintes de ressources et de coûts.
 
 
 ## Architecture globale du système
 
-L'idée étant d'avoir une solution clé en main, l'objet est donc un boitier contenant l'ensemble du système. 
+L'idée étant d'avoir une solution clé en main, l'objet est donc un boîtier contenant l'ensemble du système. 
 Afin de le mettre en place il faut donc les éléments suivants : 
-- Le boitier contenant le système
-- Une surface sur laquelle fixer le boitier
-- Une alimentation (comprise entre 3 et 20V) ou un chargeur de téléphone (5V) et un cable micro-USB
+- Le boîtier contenant le système
+- Une surface sur laquelle fixer le boîtier
+- Une alimentation (comprise entre 3 et 20V) ou un chargeur de téléphone (5V) et un câble micro-USB
 
-Le but étant de placer le boitier à une distance relativement haute afin qu'il ne puisse être atteint trop rapidement.
+Le but étant de placer le boîtier à une distance relativement haute afin qu'il ne puisse être atteint trop rapidement.
 
 ### Fonctionnalités
 
 Le système ainsi installé est capable de réaliser les fonctionnalités suivantes :
 - Détection de personnes avec un angle de 120 degrés à une distance maximum de 6 mètres.
 - Retourne d'informations avec un effet de lumière grâce au bandeau de LED :
-  - Lumière totalement bleu = le système est connecté au Bluetooth et l'alarme est innactive.
-  - Lumière bleu au centre et rouge aux extrémitésé = le système est connecté au Bluetooth et l'alarme sera active après déconnexion.
+  - Lumière totalement bleu = le système est connecté au Bluetooth et l'alarme est inactive.
+  - Lumière bleu au centre et rouge aux extrémités = le système est connecté au Bluetooth et l'alarme sera activée après déconnexion.
   - Lumière rouge avec pulsations = le système a détecté quelqu'un et l'alarme sonne.
 - Détection de fixation au mur. Si une personne décroche le système du mur, l'alarme le détecte et sonne.
 - Communication Bluetooth basse consommation.
-- Peu couteux
-- Controlable avec une application Android permettant de :
+- Peu coûteux
+- Contrôlable avec une application Android permettant de :
   - Activer/désactiver l'alarme.
   - Voir combien de personnes ont été détectées.
   - Voir l'historique des détections.
@@ -72,9 +72,9 @@ Le système ainsi installé est capable de réaliser les fonctionnalités suivan
 
 Un système de ce type peut comporter différents aspects de sécurité.
 
-Tout d'abord l'un des éléments de sécurité peut être l'accés physique au boitier. C'est pour cette raison que nous avons en plus rajouté un bouton poussoire qui permet de vérifier la bonne fixation du boitier sur le mur. Mais cet aspect dépend aussi de l'environnement dans lequel le système est, et surtout de là où celui-ci est placé. Le système reste avant tout un prototype et, qui plus est, fonctionne sur secteur donc à la moindre coupure de courant ou accès à celui-ci une personne pourra potentiellement dégrader le système.
+Tout d'abord l'un des éléments de sécurité peut être l'accès physique au boîtier. C'est pour cette raison que nous avons en plus rajouté un bouton poussoire qui permet de vérifier la bonne fixation du boîtier sur le mur. Mais cet aspect dépend aussi de l'environnement dans lequel le système est, et surtout de là où celui-ci est placé. Le système reste avant tout un prototype et, qui plus est, fonctionne sur secteur donc à la moindre coupure de courant ou accès à celui-ci une personne pourra potentiellement dégrader le système.
 
-Outre l'aspect sécurité physique, on retrouve aussi l'aspect confidentialité (décrit dans la partie suivante) ainsi que la partie échange de données via un protocole sans fils. A cet effet on retrouve de nombreux articles en lignes evoquant la sécurité des protocoles de communications sur le Bluetooth Basse Consommation (BLE) dont le site [Vaadata](https://www.vaadata.com/blog/fr/bluetooth-low-energy-securite-objets-connectes/) fait office : `un objet peut être vulnérable à cause soit de failles du standard lui-même, soit d’un mauvais choix parmi les fonctionnalités (notamment au niveau de l’appairage), ou soit d’une mauvaise implémentation du BLE`. Par conséquent nous avons fait attention aux informations échangées et à la manière dont nous avons programmé notre système. C'est par la même occasion que nous en avons profité afin d'ajouter un code PIN permettant de vérouiller les actions sur notre système et éviter que n'importe qui puisse s'y connecter.
+Outre l'aspect sécurité physique, on retrouve aussi l'aspect confidentialité (décrit dans la partie suivante) ainsi que la partie échange de données via un protocole sans fil. A cet effet on retrouve de nombreux articles en lignes evoquant la sécurité des protocoles de communications sur le Bluetooth Basse Consommation (BLE) dont le site [Vaadata](https://www.vaadata.com/blog/fr/bluetooth-low-energy-securite-objets-connectes/) fait office : `un objet peut être vulnérable à cause soit de failles du standard lui-même, soit d’un mauvais choix parmi les fonctionnalités (notamment au niveau de l’appairage), ou soit d’une mauvaise implémentation du BLE`. Par conséquent nous avons fait attention aux informations échangées et à la manière dont nous avons programmé notre système. C'est par la même occasion que nous en avons profité afin d'ajouter un code PIN permettant de verrouiller les actions sur notre système et éviter que n'importe qui puisse s'y connecter.
 
 
 ## Respect de la vie privée (RGPD)
@@ -87,15 +87,15 @@ Outre l'aspect sécurité physique, on retrouve aussi l'aspect confidentialité 
 ## Architecture matérielle de l'objet
 
 Afin de mener à bien ce projet nous avons utilisé différents éléments qui sont les suivants :
-- Un [Arduino Tiny Machine Learning Kit](https://store.arduino.cc/products/arduino-tiny-machine-learning-kit) qui est basé sur une Arduino Nano 33 BLE Lite. Cette carte est spécifiquement concu pour les projets IoT. En effet, elle dispose de nombreux éléments dont : 
-  - une connection BLE (Bluetooth Low Energy) : utilisé afin d'envoyer des informations au smartphone.
-  - un capteur faisant office d'accéléromètre, magnétomètre et gyroscope : non utilisé dans notre projet car le boitier sera fixé.
+- Un [Arduino Tiny Machine Learning Kit](https://store.arduino.cc/products/arduino-tiny-machine-learning-kit) qui est basé sur une Arduino Nano 33 BLE Lite. Cette carte est spécifiquement conçue pour les projets IoT. En effet, elle dispose de nombreux éléments dont : 
+  - une connection BLE (Bluetooth Low Energy) : utilisée afin d'envoyer des informations au smartphone.
+  - un capteur faisant office d'accéléromètre, magnétomètre et gyroscope : non utilisé dans notre projet car le boîtier sera fixé.
   - un capteur de proximité : non utilisé car son utilisation est limitée dans le cadre de notre projet.
-  - un microphone omnidirentionnel : non utilisé pour l'instant mais qui pourra être intégré plus tard.
+  - un microphone omnidirectionnel : non utilisé pour l'instant mais qui pourra être intégré plus tard.
 - Un [Grove buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/) piézo permettant de jouer des sons.
 - Un [Grove PIR sensor](https://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/) afin de détecter la présence d'une personne.
-- Un [Grove bouton](https://wiki.seeedstudio.com/Grove-Button/) qui a pour but de vérifier que le boitier est bien fixé au mur.
-- Un bandeau de LED addressables WS2812B permettant un retour d'informations visuelles.
+- Un [Grove bouton](https://wiki.seeedstudio.com/Grove-Button/) qui a pour but de vérifier que le boîtier est bien fixé au mur.
+- Un bandeau de LED adressables WS2812B permettant un retour d'informations visuelles.
 
 L'ensemble des composants sont connectés de la manière suivantes : 
 
@@ -108,8 +108,8 @@ L'ensemble des composants sont connectés de la manière suivantes :
 <u>Remarque :</u> On notera que l'Arduino ne peut fournir qu'une tension de 3,3V.
 
 D'autres éléments sont également utilisés comme :
-- Une alimentation mise en place à l'aide d'un chargeur de téléphone et un cable micro-USB.
-- Un boitier concu à l'aide d'une découpeuse laser et d'une plaque de contreplaqué de 3 mm.
+- Une alimentation mise en place à l'aide d'un chargeur de téléphone et un câble micro-USB.
+- Un boîtier conçu à l'aide d'une découpeuse laser et d'une plaque de contreplaqué de 3 mm.
 
 <p align="center">
   <img src="Images/Case.png" width="400">
@@ -120,7 +120,7 @@ D'autres éléments sont également utilisés comme :
 
 ## Estimation de la BOM de notre produit
 
-La BOM est la liste compète de toutes les pièces et matières utilisée afin de fabriquer ce produit. Pour la réaliser, on se base sur une estimation de production de l'ordre de 5000 unités produites. On dresse alors le tableau suivant :
+La BOM est la liste complète de toutes les pièces et matières utilisées afin de fabriquer ce produit. Pour la réaliser, on se base sur une estimation de production de l'ordre de 5000 unités produites. On dresse alors le tableau suivant :
 
 | Matériel | Quantité | Prix unitaire | Prix de groupe | Revendeur | Remarque |
 | -------- | -------- | ------------- | -------------- | --------- | -------- |
@@ -135,23 +135,23 @@ La BOM est la liste compète de toutes les pièces et matières utilisée afin d
 | Vis | 38 | 6,90 € | 263 € | [Leroy Merlin](https://www.leroymerlin.fr/produits/quincaillerie/cheville-vis-clou-et-boulon/vis/vis-a-bois/lot-de-400-vis-acier-tete-fraisee-standers-diam-4-mm-x-l-16-mm-82231848.html) | Lot de 400 vis avec un diamètre de la tige de 4 mm |
 | Colle à bois | 50 | 9,90€ | 495 € | [Leroy Merlin](https://www.leroymerlin.fr/produits/peinture-droguerie/colle-et-adhesif/colle/colle-a-bois/colle-a-bois-rapide-axton-500-gr-80104801.html) | |
 
-Ce qui nous donne un total de **337 076 €** à débourser pour concevoir 5000 unités. Quant au prix unitaire celui-ci reviens donc à **67,42 €**.
+Ce qui nous donne un total de **337 076 €** à débourser pour concevoir 5000 unités. Quant au prix unitaire celui-ci revient donc à **67,42 €**.
 
-A noter que l'on utlise ici des revendeurs officiels sauf pour le bandeau de LED introuvable sur ce genre de site. 
-De plus certains prix pourrait être revu à la baisse en faisant de l'optimisation (nottament avec l'espace lié à la découpeuse laser).
+A noter que l'on utilise ici des revendeurs officiels sauf pour le bandeau de LED introuvable sur ce genre de site. 
+De plus, certains prix pourraient être revus à la baisse en faisant de l'optimisation (notamment avec l'espace lié à la découpeuse laser).
 Etant donné que l'on utilise pas la caméra présente sur le kit, on pourrait aussi commander seulement l'[Arduino Nano 33 BLE](https://store.arduino.cc/products/arduino-nano-33-ble) (en version non *sense*) permettant d'économiser 27€ sur chaque unité !
-Les prix peuvent également être négocié étant donné l'achat de groupe conséquent fait pour 5000 unités et que les sites actuels ne prennent pas en compte.
+Les prix peuvent également être négociés étant donné l'achat de groupe conséquent fait pour 5000 unités et que les sites actuels ne prennent pas en compte.
 
-La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisation des machines du type découpeuse laser ou encore la main d'oeuvre pour l'assemblage de l'ensemble.
+La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisation des machines du type découpeuse laser ou encore la main d'œuvre pour l'assemblage de l'ensemble.
 
 
 ## Estimation du cout des certifications
 
-Une des certifications qui nous vient à l'esprit pour ce genre de système et en accord avec les cours suivis à Polytech Grenoble, est la compatibilité électromagnétique (CEM) car notre système utilise nottament une communication Bluetooth. D'après le site [Rtone](https://blog.rtone.fr/essais-cem) le coût de cette certification peut se situer ```entre 8k€ et 50k€ dans le domaine de l'IoT```. Le prix exacte de cette certification est difficilement quantifiable sans demander de devis car cela dépend de sa complexité (radio notamment) et aussi selon la quantité de pays ciblés. En fonction de ces différents points l’écart peut être important mais cette phase est obligatoire afin de commercialiser un tel produit.
+Une des certifications qui nous vient à l'esprit pour ce genre de système et en accord avec les cours suivis à Polytech Grenoble, est la compatibilité électromagnétique (CEM) car notre système utilise notamment une communication Bluetooth. D'après le site [Rtone](https://blog.rtone.fr/essais-cem) le coût de cette certification peut se situer ```entre 8k€ et 50k€ dans le domaine de l'IoT```. Le prix exact de cette certification est difficilement quantifiable sans demander de devis car cela dépend de sa complexité (radio notamment) et aussi selon la quantité de pays ciblés. En fonction de ces différents points l’écart peut être important mais cette phase est obligatoire afin de commercialiser un tel produit.
 
-Pour un produit vendu en France il faut également s'intérésser aux normes NF et CE et qui indique que nous, fabricant, nous nous engageons sa responsabilité sur la conformité du produit à l'ensemble des exigences fixées par la législation françcaise et également de l'Union européenne applicable à ce produit. Pour ce faire il faut réaliser des contrôles et essais qui assurent la conformité du produit aux exigences essentielles définies dans les textes européens concernés. Plus d'informations sont donnés sur le site du [ministère de l'économie et des finances](https://www.economie.gouv.fr/dgccrf/Publications/Vie-pratique/Fiches-pratiques/Le-marquage-CE).
+Pour un produit vendu en France il faut également s'intéresser aux normes NF et CE et qui indique que nous, fabricants, nous engageons sa responsabilité sur la conformité du produit à l'ensemble des exigences fixées par la législation française et également de l'Union européenne applicable à ce produit. Pour ce faire, il faut réaliser des contrôles et essais qui assurent la conformité du produit aux exigences essentielles définies dans les textes européens concernés. Plus d'informations sont données sur le site du [ministère de l'économie et des finances](https://www.economie.gouv.fr/dgccrf/Publications/Vie-pratique/Fiches-pratiques/Le-marquage-CE).
 
-Enfin une autre norme auquel on pourrait penser concerne le bruit que peut émettre l'alarme. Des réglementations en France impose une limite de puissances sonore des sirènes à 105 décibels et leur durée de fonctionnement à 3 minutes. Le signal sonore quelle émet doit aussi être différent de celui des services d'urgence et de secours (SAMU, pompiers, police, gendarmerie, etc).
+Enfin une autre norme auquel on pourrait penser concerne le bruit que peut émettre l'alarme. Des réglementations en France imposent une limite de puissance sonore des sirènes à 105 décibels et leur durée de fonctionnement à 3 minutes. Le signal sonore qu'elle émet doit aussi être différent de celui des services d'urgence et de secours (SAMU, pompiers, police, gendarmerie, etc).
 
 
 ## Implémentation logiciel embarqué de l'objet défini
@@ -168,10 +168,10 @@ Le Bluetooth Basse Consommation (BLE) est un dérivé du Bluetooth utilisé pour
 Le modèle d'Arduino mis à notre disposition est capable d’utiliser le BLE. Nous l’avons alors paramétré de façon à contenir un service avec trois caractéristiques permettant l'échanges d'informations dont chaque service permet de :
 - envoyer le nombre de personnes détectées.
 - activer/désactiver l'alarme.
-- rentrer le code PIN du système. 
+- entrer le code PIN du système. 
 Les caractéristiques conçues reposent sur des identifiants uniques (UUID) dérivés de l'identifiant principal de notre Arduino. Afin d'obtenir un identifiant de ce genre pour notre Arduino on peut utiliser des générateurs d'UUID en ligne comme [celui-ci](https://www.uuidgenerator.net/).
 
-Le tout est illustré de la facon suivante :
+Le tout est illustré de la façon suivante :
 
 <p align="center">
   <img src="Images/Bluetooth_caracteristics.png" width="300">
@@ -191,9 +191,9 @@ Les informations échangées par la communication Bluetooth sont du type unsigne
 
 ## Métriques du logiciel embarqué
 
-Afin de mettre à bien ce projet nous avons rédigé 112 lignes de code en C sous l'IDE Arduino. Afin de réduire ce nombre de ligne de code nous avons utilisé des librairies déjà concu et permettant de grandement gagner du temps face au peu de temps dont nous disposons. Le projet est assez compact puisque sa taille n'est que de 322 ko soit 32% de l'espace de stockage de programmes de notre carte Aruino. Quant aux variables globales, elles occupent 69 ko soit 29% de mémoire physique dynamique d'après le compilateur.
+Afin de mener à bien ce projet, nous avons rédigé 112 lignes de code en C sous l'IDE Arduino. Afin de réduire ce nombre de lignes de code nous avons utilisé des librairies déjà conçues et permettant de grandement gagner du temps face au peu de temps dont nous disposons. Le projet est assez compact puisque sa taille n'est que de 322 ko soit 32% de l'espace de stockage de programmes de notre carte Arduino. Quant aux variables globales, elles occupent 69 ko soit 29% de mémoire physique dynamique d'après le compilateur.
 
-Concernant l'application développé sous MIT App Inventor celle-ci ne fonctionne pas sous forme de ligne de code mais sous forme de blocs à empiler (façon Scratch). Par conséquent il est difficile de quantifier le travail réalisé mais nous avons cependant essayé de faire des blocs génériques afin qu'ils puissent facilement s'adapter aux services Bluetooth dont nous disposons. Cette démarche nous a ainsi permis de gagner du temps là encore. La taille de l'application dans son état actuel est de 3,57 Mo.
+Concernant l'application développée sous MIT App Inventor celle-ci ne fonctionne pas sous forme de ligne de code mais sous forme de blocs à empiler (façon Scratch). Par conséquent, il est difficile de quantifier le travail réalisé mais nous avons cependant essayé de faire des blocs génériques afin qu'ils puissent facilement s'adapter aux services Bluetooth dont nous disposons. Cette démarche nous a ainsi permis de gagner du temps là encore. La taille de l'application dans son état actuel est de 3,57 Mo.
 
 L'ensemble du code est disponible dans les répertoires [Arduino](https://github.com/AlexFouilleul/Detection-alarm/tree/main/Arduino) et [Application](https://github.com/AlexFouilleul/Detection-alarm/tree/main/Application). 
 
@@ -202,10 +202,10 @@ Les ressources utilisées pendant ce projet sont quant à elles disponibles [ici
 
 ## Mesure des temps des phases d'éxécution
 
-Lors de l'éxécution de notre système nous avons relevé différents temps de mesures pour les principales phases et qui sont les suivantes :
+Lors de l'exécution de notre système nous avons relevé différents temps de mesures pour les principales phases et qui sont les suivantes :
 - **Phase de surveillance :** lors de la surveillance, le système analyse la pièce toutes les 3 secondes. Cette durée est relative au délai minimum d'analyse lié au capteur PIR. 
-- **Phase d'alerte :** lorsque le système a détecté une personne, celui-ci fait fonctionner le buzzer et les LED en faisant varier leur intensité. Le système répéte ainsi 5 cycles ayant chacun un délai d'une seconde ce qui nous donne un temps total de 5 seconde pour cette phase.
-- **Phase de communication Bluetooth :** pour cette phase nous n'avons pas de métrique étant donné que le temps de communication de cette partie dépend de la localisation du boitier vis à vis du smartphone de la personne. Cependant lors de nos essais, l'échange de données s'est avéré être presque instantanée et donc difficile pour nous de mesurer ce temps qui doit être de l'ordre des millisecondes. Le plus long étant finalement la connexion au système car le smartphone récupère différentes propriétés du système (son nom, son fabricant, ses caractéristiques, etc). La connexion au système prend ainsi environ 2 secondes d'après nos essais.
+- **Phase d'alerte :** lorsque le système a détecté une personne, celui-ci fait fonctionner le buzzer et les LED en faisant varier leur intensité. Le système répète ainsi 5 cycles ayant chacun un délai d'une seconde ce qui nous donne un temps total de 5 secondes pour cette phase.
+- **Phase de communication Bluetooth :** pour cette phase nous n'avons pas de métrique étant donné que le temps de communication de cette partie dépend de la localisation du boîtier vis à vis du smartphone de la personne. Cependant lors de nos essais, l'échange de données s'est avéré être presque instantané et donc difficile pour nous de mesurer ce temps qui doit être de l'ordre des millisecondes. Le plus long étant finalement la connexion au système car le smartphone récupère différentes propriétés du système (son nom, son fabricant, ses caractéristiques, etc). La connexion au système prend ainsi environ 2 secondes d'après nos essais.
 
 
 ## Estimation de la durée de vie de la batterie de l'objet
@@ -224,7 +224,7 @@ On notera tout de même que celui-ci peut-être alimenté par pile mais ce n'est
 
 ## Recherche et analyse des produits concurrents
 
-Dans cette partie nous comparons les différents produits vis à vis du notre. L'idée n'est pas de cibler un produit en particulier mais plutot une gamme de produit afin d'éviter d'avoir un tableau redondant étant donné qu'ils existent de nombreuses alarme à détection et qu'elles se valent toutes plus ou moins dans les grandes lignes.
+Dans cette partie nous comparons les différents produits vis à vis du notre. L'idée n'est pas de cibler un produit en particulier mais plutôt une gamme de produit afin d'éviter d'avoir un tableau redondant étant donné qu'il existe de nombreuses alarmes à détection et qu'elles se valent toutes plus ou moins dans les grandes lignes.
 
 | Produit              | Avantages                                                                    | Inconvénients                                               |
 | -------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------- |
@@ -236,7 +236,7 @@ Dans cette partie nous comparons les différents produits vis à vis du notre. L
 ## Intégrations effectuées
 
 Afin de communiquer avec le système une première intégration a été mise en place à travers l'application "LightBlue® - Bluetooth Low Energy" disponible sur le [Google Play Store](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1) pour les téléphones Android et également sur l'[Apple App Store](https://apps.apple.com/fr/app/lightblue/id557428110?platform=iphone) pour les iPhone. 
-Cette application permet de se connecter à n'importe quel appareil utilisant le protocole Bluetooth Low Energy. Grâce à celle-ci nous sommes donc en mesure de détecter le ou les services Bluetooth que propose le système. Elle a été spécifiquement concu pour les développeurs, ainsi pour chaque service on peut venir lire, écrire ou être notifié en fonction de comment le service a été défini dans le code auparavant. De plus on peut gérer l'envoi sous différentes forme (binaire, hexa, caractère, signed/unsigned ou encore little/big endian). Ci-dessous des captures d'écran de l'application illustrant nos propos.
+Cette application permet de se connecter à n'importe quel appareil utilisant le protocole Bluetooth Low Energy. Grâce à celle-ci nous sommes donc en mesure de détecter le ou les services Bluetooth que propose le système. Elle a été spécifiquement conçue pour les développeurs, ainsi pour chaque service on peut venir lire, écrire ou être notifié en fonction de comment le service a été défini dans le code auparavant. De plus on peut gérer l'envoi sous différentes formes (binaire, hexa, caractère, signed/unsigned ou encore little/big endian). Ci-dessous des captures d'écran de l'application illustrant nos propos.
 
 <p align="center">
   <img src="Images/LB_screenshot1.jpg" width="200">
@@ -249,7 +249,7 @@ Cette application permet de se connecter à n'importe quel appareil utilisant le
 
 Cette application nous a donc été très utile cependant elle ne dispose pas d'une interface claire et lisible pour un utilisateur lambda. 
 
-Dans cette optique nous avons décidé de créer une seconde application Android qui serait spécifiquement dédié au projet. Cette application serait basique mais permettrait de mettre en forme les informations et communiquer avec les services Bluetooth dont dispose le système. N'ayant pas de connaissances particulières sur le développement d'application sous Android nous avons fait le choix de développer sous [MIT App Inventor](https://appinventor.mit.edu/). L'application se présente donc sous la forme suivante : 
+Dans cette optique, nous avons décidé de créer une seconde application Android qui serait spécifiquement dédiée au projet. Cette application serait basique mais permettrait de mettre en forme les informations et communiquer avec les services Bluetooth dont dispose le système. N'ayant pas de connaissances particulières sur le développement d'application sous Android nous avons fait le choix de développer sous [MIT App Inventor](https://appinventor.mit.edu/). L'application se présente donc sous la forme suivante : 
 
 <p align="center">
   <img src="Images/DA_screenshot1.jpg" width="200">
@@ -260,14 +260,14 @@ Dans cette optique nous avons décidé de créer une seconde application Android
   <i>Captures d'écran de l'application développé pour notre système (démarrage, en attente, connecté, à propos)</i>
 </p>
 
-On retrouve différents éléments consituant l'application dont un bouton en son centre permettant d'activer/désactiver l'alarme lors de son appui. Elle dispose également d'une barre de navigation en bas avec différents boutons permettant de sélectionner l'appareil sur lequel se connecter ainsi qu'un bouton permettant de voir l'historique des détections et enfin un bouton relatif aux informations de l'applications.
+On retrouve différents éléments constituant l'application dont un bouton en son centre permettant d'activer/désactiver l'alarme lors de son appui. Elle dispose également d'une barre de navigation en bas avec différents boutons permettant de sélectionner l'appareil sur lequel se connecter ainsi qu'un bouton permettant de voir l'historique des détections et enfin un bouton relatif aux informations de l'application.
 
 
 ## Problèmes rencontrés
 
 Lors de la réalisation de ce projet différents problèmes se sont confrontés à nous. 
 
-Dès le début du projet nous avons rencontré un problème lié à la limitation de l'utilisation de la caméra embarqué sur notre kit Arduino. Nous avons travaillé autour de ce capteur dans l'ambition de l'intégrer plus tard dans notre système. Cependant lors de nos essais nous nous sommes rendus compte que le résultat obtenu est peu (voir pas) exploitable, la quanlité de la camera laissant grandement à désirer. Celle-ci étant un module de 0,3 MP pouvant gérer différentes résolutions de photos allant de 176 x 144 (QCIF) à 640 x 480 (VGA). Nous n'avons jamais pu tester la dernière résolution de caméra étant donné que notre Arduino ne dispose pas assez de stockage pour contenir l'image. Pour les autres résolutions on obtient des photos floues, peu détaillées à courte ou longue distance et avec une colorimétrie qui tend vers le vert comme en témoignent les photos ci-dessous.
+Dès le début du projet nous avons rencontré un problème lié à la limitation de l'utilisation de la caméra embarquée sur notre kit Arduino. Nous avons travaillé autour de ce capteur dans l'ambition de l'intégrer plus tard dans notre système. Cependant lors de nos essais nous nous sommes rendus compte que le résultat obtenu est peu (voir pas) exploitable, la qualité de la caméra laissant grandement à désirer. Celle-ci étant un module de 0,3 MP pouvant gérer différentes résolutions de photos allant de 176 x 144 (QCIF) à 640 x 480 (VGA). Nous n'avons jamais pu tester la dernière résolution de caméra étant donné que notre Arduino ne dispose pas assez de stockage pour contenir l'image. Pour les autres résolutions on obtient des photos floues, peu détaillées à courte ou longue distance et avec une colorimétrie qui tend vers le vert comme en témoignent les photos ci-dessous.
 
 <p align="center">
   <img src="Images/Camera_picture1.png" width="305">
@@ -276,14 +276,13 @@ Dès le début du projet nous avons rencontré un problème lié à la limitatio
   <i>Images obtenues lors de nos essais avec la caméra OV7675</i>
 </p>
 
-Nous nous sommes rendus compte qu'il est difficile de l'utiliser en temps réel. De plus afin d'afficher l'image celle-ci est renvoyé sous forme d'une immense chaine de caractères pouvant faire à la fois planter l'Arduino, notre PC ou encore le logiciel Arduino IDE ainsi que le programme Python servant à l'affichage.
+Nous nous sommes rendus compte qu'il est difficile de l'utiliser en temps réel. De plus, afin d'afficher l'image, celle-ci est renvoyée sous forme d'une immense chaîne de caractères pouvant faire à la fois planter l'Arduino, notre PC ou encore le logiciel Arduino IDE ainsi que le programme Python servant à l'affichage.
 
-Un second problème sous forme de limitation hardware s'est également présenté avec l'introduction d'un bandeau de LED. En effet l'Arduino ne dispose que de tensions de 3.3V, il faut donc veiller à utiliser des capteurs fonctionnant avec cette tension (qui est d'habitude de l'ordre de 5V). Face à ce problème nous avons dans un premier temps essayé de faire un PCB permettant d'alimenter le bandeau de LED directement avec l'alimentation (partie puissance) et le controler par la suite avec l'Arduino (partie contrôle). Cependant cette solution n'a pas fonctionné car nous avons eu besoin d'un composant permettant de faire passer la commande de contrôle de l'Arduino de 3,3V à 5V (leveler shifter). En plus de rendre le système un peu plus complexe, nous n'avions tout simplement pas ce composant à disposition. Nous avons finalement choisis de retirer tout cela et, sous recommandations du responsable du FABLAB, alimenté directement les LED en 3.3V en faisant attention de limiter l'intensité d'éclairage du bandeau afin de ne pas tirer trop de courant étant donné la puissance que peut fournir l'Arduino.
+Un second problème sous forme de limitation hardware s'est également présenté avec l'introduction d'un bandeau de LED. En effet l'Arduino ne dispose que de tensions de 3.3V, il faut donc veiller à utiliser des capteurs fonctionnant avec cette tension (qui est d'habitude de l'ordre de 5V). Face à ce problème nous avons dans un premier temps essayé de faire un PCB permettant d'alimenter le bandeau de LED directement avec l'alimentation (partie puissance) et le contrôler par la suite avec l'Arduino (partie contrôle). Cependant cette solution n'a pas fonctionné car nous avons eu besoin d'un composant permettant de faire passer la commande de contrôle de l'Arduino de 3,3V à 5V (leveler shifter). En plus de rendre le système un peu plus complexe, nous n'avions tout simplement pas ce composant à disposition. Nous avons finalement choisis de retirer tout cela et, sous recommandations du responsable du FABLAB, alimenté directement les LED en 3.3V en faisant attention de limiter l'intensité d'éclairage du bandeau afin de ne pas tirer trop de courant étant donné la puissance que peut fournir l'Arduino.
 
-
-Enfin un dernier problème que nous avons rencontré concerne l'application que nous avons développé. En effet nous avons remarqué que celle-ci ne fonctionne pas sous Android 13 (version la plus récente à l'heure actuelle) à cause de problème de compatibilité et de limitations de sécurité qu'impose cette version. De plus la librairie incluse dans l'application mets en forme les données dans une forme différente que celles envoyées (confusion entre big-endian et little-endian). Ainsi pour la récéption de données de l'Arduino au téléphone, le code mis en place est en mesure de remettre en forme les données avant affichage sur l'application. Cependant elle n'est pas en mesure d'en faire de même pour l'envoi de données du téléphone vers l'Arduino. Nous n'avons pas trouvé de solutions pour l'instant et pensons que la seule solutions possibles est de faire un traitement du coté de l'Arduino mais qui aurait pour conséquence de grandement alourdir le code présent.
+Enfin un dernier problème que nous avons rencontré concerne l'application que nous avons développée. En effet, nous avons remarqué que celle-ci ne fonctionne pas sous Android 13 (version la plus récente à l'heure actuelle) à cause de problèmes de compatibilité et de limitations de sécurité qu'impose cette version. De plus, la librairie incluse dans l'application met en forme les données dans une forme différente que celles envoyées (confusion entre big-endian et little-endian). Ainsi pour la réception de données de l'Arduino au téléphone, le code mis en place est en mesure de remettre en forme les données avant affichage sur l'application. Cependant elle n'est pas en mesure d'en faire de même pour l'envoi de données du téléphone vers l'Arduino. Nous n'avons pas trouvé de solutions pour l'instant et pensons que la seule solution possible est de faire un traitement du côté de l'Arduino mais qui aurait pour conséquence de grandement alourdir le code présent.
 
 
 ## Conclusion
 
-Ce projet a été pour nous l'occasion de développer de nouvelles compétences dans le domaine de l'IoT. Grâce à ce 4 séances de projet nous avons pu mettre en place un système comme celui-ci avec sa communication en Bluetooth, une application Android ainsi que sa mise en forme avec un boitier réalisé à la découpeuse laser. De plus ce projet nous a permis de peaufiner notre maitrise de GitHub en réalisant un projet complet dessus.
+Ce projet a été pour nous l'occasion de développer de nouvelles compétences dans le domaine de l'IoT. Grâce à ces 4 séances de projet nous avons pu mettre en place un système comme celui-ci avec sa communication en Bluetooth, une application Android ainsi que sa mise en forme avec un boîtier réalisé à la découpeuse laser. De plus ce projet nous a permis de peaufiner notre maîtrise de GitHub en réalisant un projet complet dessus.
