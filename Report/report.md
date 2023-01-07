@@ -111,9 +111,11 @@ D'autres éléments sont également utilisés comme :
 - Une alimentation mise en place à l'aide d'un chargeur de téléphone et un cable micro-USB.
 - Un boitier concu à l'aide d'une découpeuse laser et d'une plaque de contreplaqué de 3 mm.
 
-```
-Insérer photo du boitier
-```
+<p align="center">
+  <img src="Images/Case.png" width="500">
+  <br>
+  <i>Boitier du système réalisé avec une découpeue laser</i>
+</p>
 
 
 ## Estimation de la BOM de notre produit
