@@ -112,7 +112,7 @@ D'autres éléments sont également utilisés comme :
 - Un boitier concu à l'aide d'une découpeuse laser et d'une plaque de contreplaqué de 3 mm.
 
 <p align="center">
-  <img src="Images/Case.png" width="500">
+  <img src="Images/Case.png" width="400">
   <br>
   <i>Boitier du système réalisé avec une découpeue laser</i>
 </p>
@@ -211,7 +211,7 @@ Lors de l'éxécution de notre système nous avons relevé différents temps de 
 ## Estimation de la durée de vie de la batterie de l'objet
 
 Notre produit étant sur secteur, celui-ci n'est pas sujet à une batterie. 
-On notera tout de même que celui-ci peut-être alimenté par pile mais ce n'est pas une piste que nous avons abordé lors de notre projet.
+On notera tout de même que celui-ci peut-être alimenté par pile mais ce n'est pas une piste que nous avons abordé lors de notre projet étant donné que le système est fixe.
 
 
 ## Analyse du cycle de vie du produit (ACV)
@@ -286,8 +286,4 @@ Enfin un dernier problème que nous avons rencontré concerne l'application que 
 
 ## Conclusion
 
-Ce projet a été pour nous l'occasion de développer de nouvelles compétences dont la mise en place d'un système comme celui-ci, sa communication en Bluetooth ainsi que sa mise en forme avec un boitier réalisé à la découpeuse laser. 
-
-```
-(à développer)
-```
+Ce projet a été pour nous l'occasion de développer de nouvelles compétences dans le domaine de l'IoT. Grâce à ce 4 séances de projet nous avons pu mettre en place un système comme celui-ci avec sa communication en Bluetooth, une application Android ainsi que sa mise en forme avec un boitier réalisé à la découpeuse laser. De plus ce projet nous a permis de peaufiner notre maitrise de GitHub en réalisant un projet complet dessus.
