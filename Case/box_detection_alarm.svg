@@ -25,9 +25,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.75575672"
-     inkscape:cx="368.50483"
-     inkscape:cy="556.39598"
+     inkscape:zoom="0.5"
+     inkscape:cx="389"
+     inkscape:cy="481"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="2391"
@@ -49,80 +49,71 @@
        id="front_outsideCutPath"
        stroke="#FF0000"
        stroke-width="0.1"
-       style="stroke:#ff0000;stroke-width:0.1"
-       vector-effect="non-scaling-stroke"
-       sodipodi:insensitive="true" />
+       style="stroke:#ff0000;stroke-width:0.2;stroke-dasharray:none"
+       vector-effect="non-scaling-stroke" />
     <path
        d="m 136,153 v 11.25 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 3.75 h 3.75 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 H 166 v -11.25 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 -3.75 h -3.75 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 z"
        id="left_outsideCutPath"
        stroke="#FF0000"
        stroke-width="0.1"
-       style="stroke:#ff0000;stroke-width:0.1"
-       vector-effect="non-scaling-stroke"
-       sodipodi:insensitive="true" />
+       style="stroke:#ff0000;stroke-width:0.2;stroke-dasharray:none"
+       vector-effect="non-scaling-stroke" />
     <path
        d="m 175,270 v 3.75 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 V 300 h 5.75 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 H 299 v -3.75 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 V 270 h -5.75 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 z"
        id="top_outsideCutPath"
        stroke="#FF0000"
        stroke-width="0.1"
-       style="stroke:#ff0000;stroke-width:0.1"
-       vector-effect="non-scaling-stroke"
-       sodipodi:insensitive="true" />
+       style="stroke:#ff0000;stroke-width:0.2;stroke-dasharray:none"
+       vector-effect="non-scaling-stroke" />
     <path
        d="m 0,0 v 11.25 h 3 v 7.5 H 0 v 7.5 h 3 v 7.5 H 0 v 7.5 h 3 v 7.5 H 0 v 7.5 h 3 v 7.5 H 0 v 7.5 h 3 v 7.5 H 0 v 7.5 h 3 v 7.5 H 0 v 7.5 h 3 v 7.5 H 0 v 7.5 h 3 v 7.5 H 0 v 7.5 h 3 v 7.5 H 0 v 7.5 3.75 h 8.75 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 H 130 v -11.25 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 V 3.75 0 h -8.75 v 3 h -7.5 V 0 h -7.5 v 3 h -7.5 V 0 h -7.5 v 3 h -7.5 V 0 h -7.5 v 3 h -7.5 V 0 h -7.5 v 3 h -7.5 V 0 h -7.5 v 3 h -7.5 V 0 h -7.5 v 3 h -7.5 V 0 h -7.5 V 3 H 8.75 V 0 Z"
        id="back_outsideCutPath"
        stroke="#FF0000"
        stroke-width="0.1"
-       style="stroke:#ff0000;stroke-width:0.1"
-       vector-effect="non-scaling-stroke"
-       sodipodi:insensitive="true" />
+       style="stroke:#ff0000;stroke-width:0.2;stroke-dasharray:none"
+       vector-effect="non-scaling-stroke" />
     <path
        d="m 136,0 v 11.25 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 v 7.5 3.75 h 3.75 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 H 166 v -11.25 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 V 3.75 0 h -3.75 v 3 h -7.5 V 0 h -7.5 v 3 h -7.5 V 0 Z"
        id="right_outsideCutPath"
        stroke="#FF0000"
        stroke-width="0.1"
-       style="stroke:#ff0000;stroke-width:0.1"
-       vector-effect="non-scaling-stroke"
-       sodipodi:insensitive="true" />
+       style="stroke:#ff0000;stroke-width:0.2;stroke-dasharray:none"
+       vector-effect="non-scaling-stroke" />
     <path
        d="m 175,231 v 3.75 h -3 v 7.5 h 3 v 7.5 h -3 v 7.5 h 3 V 261 h 5.75 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 h 7.5 v 3 h 7.5 v -3 H 299 v -3.75 h 3 v -7.5 h -3 v -7.5 h 3 v -7.5 h -3 V 231 h -5.75 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 h -7.5 v -3 h -7.5 v 3 z"
        id="bottom_outsideCutPath"
        stroke="#FF0000"
        stroke-width="0.1"
-       style="stroke:#ff0000;stroke-width:0.1"
-       vector-effect="non-scaling-stroke"
-       sodipodi:insensitive="true" />
+       style="stroke:#ff0000;stroke-width:0.2;stroke-dasharray:none"
+       vector-effect="non-scaling-stroke" />
     <rect
-       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.00999502;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="right_hole"
        width="8.9900055"
        height="2.990005"
        x="146.505"
-       y="114.01516"
-       sodipodi:insensitive="true" />
+       y="114.01516" />
     <rect
-       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.00999502;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="left_hole"
        width="8.9900045"
        height="2.990005"
        x="146.505"
-       y="266.90515"
-       sodipodi:insensitive="true" />
+       y="266.90515" />
     <rect
-       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.0100226;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="led_hole"
        width="117.98998"
        height="23.989977"
        x="6.0000114"
-       y="273.005"
-       sodipodi:insensitive="true" />
+       y="273.005" />
     <g
        id="g11687"
        inkscape:label="buzzer_hole"
        transform="translate(-0.01400838,-22.219591)"
-       sodipodi:insensitive="true">
+       style="stroke-width:0.2;stroke-dasharray:none">
       <rect
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.0100313;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
          id="rect11620"
          width="73.989967"
          height="2.9899688"
@@ -132,7 +123,7 @@
          inkscape:label="buzzer_hole_1"
          sodipodi:insensitive="true" />
       <rect
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.0100313;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
          id="rect11691"
          width="73.989967"
          height="2.9899688"
@@ -142,7 +133,7 @@
          inkscape:label="buzzer_hole_2"
          sodipodi:insensitive="true" />
       <rect
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.0100313;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
          id="rect11693"
          width="73.989967"
          height="2.9899688"
@@ -152,7 +143,7 @@
          inkscape:label="buzzer_hole_3"
          sodipodi:insensitive="true" />
       <rect
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.0100313;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
          id="rect11695"
          width="73.989967"
          height="2.9899688"
@@ -162,7 +153,7 @@
          inkscape:label="buzzer_hole_4"
          sodipodi:insensitive="true" />
       <rect
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.0100313;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
          id="rect11697"
          width="73.989967"
          height="2.9899688"
@@ -173,40 +164,37 @@
          sodipodi:insensitive="true" />
     </g>
     <rect
-       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="rect11689"
        width="22.900187"
        height="22.900187"
        x="92.004997"
        y="161.03891"
-       inkscape:label="PIR_hole"
-       sodipodi:insensitive="true" />
+       inkscape:label="PIR_hole" />
     <rect
-       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.00999404;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="rect11726"
        width="11.990006"
        height="7.990006"
        x="20.825832"
        y="92.534164"
-       inkscape:label="USB_hole"
-       sodipodi:insensitive="true" />
+       inkscape:label="USB_hole" />
     <rect
-       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.00999922;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="rect11728"
        width="8.4900007"
        height="8.4913254"
        x="-53.786011"
        y="92.004997"
        inkscape:label="button_hole"
-       transform="scale(-1,1)"
-       sodipodi:insensitive="true" />
+       transform="scale(-1,1)" />
     <g
        id="g1801"
        inkscape:label="screw_hole1"
        transform="translate(-10.626144,-11.08704)"
-       sodipodi:insensitive="true">
+       style="stroke-width:0.2;stroke-dasharray:none">
       <rect
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
          id="rect306"
          width="3.9972394"
          height="9.9972391"
@@ -215,7 +203,7 @@
          inkscape:label="rect1"
          ry="1.9986197" />
       <circle
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.011;stroke-dasharray:none;stroke-opacity:1"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
          id="path967"
          cx="75.626144"
          cy="34.231644"
@@ -226,9 +214,9 @@
        id="g1823"
        inkscape:label="screw_hole2"
        transform="translate(-65.145237,62.72331)"
-       sodipodi:insensitive="true">
+       style="stroke-width:0.2;stroke-dasharray:none">
       <rect
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
          id="rect1819"
          width="3.9972394"
          height="9.9972391"
@@ -237,7 +225,7 @@
          inkscape:label="rect1"
          ry="1.9986197" />
       <circle
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
          id="circle1821"
          cx="75.626144"
          cy="34.231644"
@@ -248,9 +236,9 @@
        id="g1829"
        inkscape:label="screw_hole3"
        transform="translate(-8.1917054,62.933297)"
-       sodipodi:insensitive="true">
+       style="stroke-width:0.2;stroke-dasharray:none">
       <rect
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
          id="rect1825"
          width="3.9972394"
          height="9.9972391"
@@ -259,7 +247,7 @@
          inkscape:label="rect1"
          ry="1.9986197" />
       <circle
-         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+         style="fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
          id="circle1827"
          cx="75.626144"
          cy="34.231644"
@@ -271,19 +259,17 @@
        id="path870"
        stroke="#FF0000"
        stroke-width="0.1"
-       style="stroke:#ff0000;stroke-width:0.1"
+       style="stroke:#ff0000;stroke-width:0.2;stroke-dasharray:none"
        vector-effect="non-scaling-stroke"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-       inkscape:label="middle_CutPath"
-       sodipodi:insensitive="true" />
+       inkscape:label="middle_CutPath" />
     <rect
-       style="display:inline;fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       style="display:inline;fill-opacity:0;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="rect1000"
        width="3.9960966"
        height="19.996096"
        x="292.04678"
        y="199.13133"
-       inkscape:label="ledcable_hole"
-       sodipodi:insensitive="true" />
+       inkscape:label="ledcable_hole" />
   </g>
 </svg>
