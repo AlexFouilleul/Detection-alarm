@@ -144,7 +144,7 @@ La BOM est la liste complète de toutes les pièces et matières utilisées afin
 | Cable Grove  | 4000 | 2,20 € | 8 800 € | [SeeedStudio](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-5-PCs-Pack-p-749.html) | Lot de 5 cable Grove de 20 cm |
 | Bandeau LED WS2812B | 100 | 14,69 € | 1 469 € | [Aliexpress](https://fr.aliexpress.com/item/1005002890783311.html) | Longueur 5m - Densité 60LED/m - Protection IP65 |
 | Chargeur de téléphone | 5000 | 4,84 € | 24 200 € | [RS Components](https://fr.rs-online.com/web/p/adaptateurs-ac-dc/2237481) | Puissance : 5V - 1A |
-| Contreplaqué | 455 | 16,59€ | 7 549 € | [Leroy Merlin](https://www.leroymerlin.fr/produits/menuiserie/panneau-planche-et-materiaux-bois/panneau-bois-agglomere-mdf/panneau-bois-recoupable/panneau-contreplaque-peuplier-ep-3-mm-x-l-100-x-75-cm-82707642.html) | Surface unitaire = ~675 cm² |
+| Contreplaqué | 455 | 16,59 € | 7 549 € | [Leroy Merlin](https://www.leroymerlin.fr/produits/menuiserie/panneau-planche-et-materiaux-bois/panneau-bois-agglomere-mdf/panneau-bois-recoupable/panneau-contreplaque-peuplier-ep-3-mm-x-l-100-x-75-cm-82707642.html) | Surface unitaire = ~675 cm² |
 | Vis | 38 | 6,90 € | 263 € | [Leroy Merlin](https://www.leroymerlin.fr/produits/quincaillerie/cheville-vis-clou-et-boulon/vis/vis-a-bois/lot-de-400-vis-acier-tete-fraisee-standers-diam-4-mm-x-l-16-mm-82231848.html) | Lot de 400 vis avec un diamètre de la tige de 4 mm |
 | Colle à bois | 50 | 9,90€ | 495 € | [Leroy Merlin](https://www.leroymerlin.fr/produits/peinture-droguerie/colle-et-adhesif/colle/colle-a-bois/colle-a-bois-rapide-axton-500-gr-80104801.html) | |
 
@@ -158,7 +158,7 @@ Les prix peuvent également être négociés étant donné l'achat de groupe con
 La BOM réalisée ci-dessus ne prend pas en compte les coûts liés à l'utilisation des machines du type découpeuse laser ou encore la main d'œuvre pour l'assemblage de l'ensemble.
 
 
-## Estimation du cout des certifications
+## Estimation du coût des certifications
 
 Une des certifications qui nous vient à l'esprit pour ce genre de système et en accord avec les cours suivis à Polytech Grenoble, est la compatibilité électromagnétique (CEM) car notre système utilise notamment une communication Bluetooth. D'après le site [Rtone](https://blog.rtone.fr/essais-cem) le coût de cette certification peut se situer ```entre 8k€ et 50k€ dans le domaine de l'IoT```. Le prix exact de cette certification est difficilement quantifiable sans demander de devis car cela dépend de sa complexité (radio notamment) et aussi selon la quantité de pays ciblés. En fonction de ces différents points l’écart peut être important mais cette phase est obligatoire afin de commercialiser un tel produit.
 
