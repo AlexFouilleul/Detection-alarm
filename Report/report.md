@@ -120,7 +120,7 @@ D'autres éléments sont également utilisés comme :
 Ce boîtier a été réalisé dans un premier temps avec le site [MakerCase](https://fr.makercase.com/#/) et qui permet d'obtenir une boîte très rapidement et simplement en lui renseignant les cotations. Par la suite on récupère le fichier .svg qu'il génère afin de l'éditer sur le logiciel [Inkscape](https://inkscape.org/fr/). Dans un second temps on vient donc éditer le schéma de notre boîte afin d'inclure les trous pour les capteurs, câble et fixations. On en profite également pour concevoir une plaque faisant office de support murale.
 
 <p align="center">
-  <img src="Images/Case1.jpg" width="400">
+  <img src="Images/Case1.jpg" width="483">
   <img src="Images/Case2.jpg" width="400">
   <br>
   <i>Parties constituants le boîtier</i>
