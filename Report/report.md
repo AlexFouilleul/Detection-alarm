@@ -67,6 +67,10 @@ Le système ainsi installé est capable de réaliser les fonctionnalités suivan
   - Voir combien de personnes ont été détectées.
   - Voir l'historique des détections.
 
+```
+(ajouter vidéo de démo)
+```
+
 
 ## Sécurité globale
 
@@ -163,7 +167,7 @@ Pour un produit vendu en France il faut également s'intéresser aux normes NF e
 Enfin une autre norme auquel on pourrait penser concerne le bruit que peut émettre l'alarme. Des réglementations en France imposent une limite de puissance sonore des sirènes à 105 décibels et leur durée de fonctionnement à 3 minutes. Le signal sonore qu'elle émet doit aussi être différent de celui des services d'urgence et de secours (SAMU, pompiers, police, gendarmerie, etc).
 
 
-## Implémentation logiciel embarqué de l'objet défini
+## Définition et implémentation du logiciel embarqué de l'objet
 
 ```
 (à rédiger)
@@ -190,12 +194,10 @@ Le tout est illustré de la façon suivante :
 
 Les informations échangées par la communication Bluetooth sont du type unsigned little-endian.
 
-
-## Définition du logiciel embarqué de l'objet
-
-```
-(à rédiger)
-```
+Pour résumer le système est capable de communiquer à travers ses caractéristiques de telle façon :
+- nb_detected : cette caractéristique ne peut qu'être lue. Elle renvoie le nombre de personne détectée par le système quand celui-ci est activé.
+- activation : cette caractéristique peut être lue et écrite. Elle permet de connaitre l'état dans lequel l'alarme est (0 = désactivé, 1 = activé). L'utilisateur peut également définir l'état de l'alarme en envoyant lui même la valeur (0 ou 1) pour définir l'état du système.
+- pin_code : caractéristique qui peut également être lue et écrite et qui permet d'envoyer le code pin au système. Celui-ci va alors vérifier s'il est correct et va renvoyer une information connaissant son état (0 = incorrect, 1 = correct)
 
 
 ## Métriques du logiciel embarqué
@@ -221,6 +223,18 @@ Lors de l'exécution de notre système nous avons relevé différents temps de m
 
 Notre produit étant sur secteur, celui-ci n'est pas sujet à une batterie. 
 On notera tout de même que celui-ci peut-être alimenté par pile mais ce n'est pas une piste que nous avons abordé lors de notre projet étant donné que le système est fixe.
+Cependant on peut tout de même calculer la puissance consommée. En effet, d'après les datasheet on sait que :
+- le capteur de proximité PIR consomme 100 µA
+- la carte Arduino consomme 32 mA
+- le buzzer consomme 45 µA
+- la résistance sur le bouton consomme I = U/R = 3,3/1000 = 3,3 mA
+- les LED consomment 60mA par LED à puissance maximale. Etant donné que nous avons 7 LED, que nous avons fait en sorte de n'utiliser qu'une seule couleur RGB et que l'ensemble est à une capacité de 20/255 en terme de luminosité, on peut en déduire un courant consommé de 7 * 60/3 * 20/255 = 11 mA. 
+Cependant les LED et le buzzer ne fonctionnent que quand un utilisateur est connecté au système ou que celui-ci ne détecte quelqu'un, donc il ne fonctionne que pendant un court lapse de temps.
+En faisant la somme des éléments qui consomment en permanence on obtient alors un courant de 35,4 mA. Soit une puissance théorique de P = U\*i = 3,3 * 0,0354 = 117 mW
+
+En réalisant des mesures avec un multimètre USB et également avec une alimentation de laboratoire on relève une puissance moyenne de ??? mW. Ces mesures ne sont pas des plus précises mais permettent d'avoir une première approximation de la consommation réelle.
+
+Le boitier disposant de place à l'intérieur et le système disposant d'un bornier permettant de l'alimenter, on peut aisément rajouter une pile au format 6LR61 (9V). La carte Arduino disposant d'un régulateur, le système peut alors admettre des tensions alant de 3,3V à 21V.
 
 
 ## Analyse du cycle de vie du produit (ACV)
@@ -258,7 +272,8 @@ Cette application permet de se connecter à n'importe quel appareil utilisant le
 
 Cette application nous a donc été très utile cependant elle ne dispose pas d'une interface claire et lisible pour un utilisateur lambda. 
 
-Dans cette optique, nous avons décidé de créer une seconde application Android qui serait spécifiquement dédiée au projet. Cette application serait basique mais permettrait de mettre en forme les informations et communiquer avec les services Bluetooth dont dispose le système. N'ayant pas de connaissances particulières sur le développement d'application sous Android nous avons fait le choix de développer sous [MIT App Inventor](https://appinventor.mit.edu/). L'application se présente donc sous la forme suivante : 
+Dans cette optique, nous avons décidé de créer une seconde application Android qui serait spécifiquement dédiée au projet. Cette application serait basique mais permettrait de mettre en forme les informations et communiquer avec les services Bluetooth dont dispose le système. N'ayant pas de connaissances particulières sur le développement d'application sous Android nous avons fait le choix de développer sous [MIT App Inventor](https://appinventor.mit.edu/). Ce site, à destination de l'enseignement, permet de développer une application Android très rapidement et simplement en définissant l'interface graphique puis le traitement à effectuer à l'aide de blocs à assembler (similaire à de la programmation de type Scratch). Afin de communiquer du smartphone au système, on utilise une librarie déjà concue nommée BluetoothLE et permettant d'exploiter la connexion en Bluetooth basse consommation.
+L'application se présente donc sous la forme suivante : 
 
 <p align="center">
   <img src="Images/DA_screenshot1.jpg" width="200">
