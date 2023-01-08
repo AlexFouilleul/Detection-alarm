@@ -117,6 +117,16 @@ D'autres éléments sont également utilisés comme :
   <i>Boitier du système réalisé avec une découpeue laser</i>
 </p>
 
+Ce boîtier a été réalisé dans un premier temps avec le site [MakerCase](https://fr.makercase.com/#/) et qui permet d'obtenir une boîte très rapidement et simplement en lui renseignant les cotations. Par la suite on récupère le fichier .svg qu'il génère afin de l'éditer sur le logiciel [Inkscape](https://inkscape.org/fr/). Dans un second temps on vient donc éditer le schéma de notre boîte afin d'inclure les trous pour les capteurs, câble et fixations. On en profite également pour concevoir une plaque faisant office de support murale.
+
+<p align="center">
+  <img src="Images/box_detection_alarm.svg" width="400" style="background-color:red;">
+  <img src="Images/detection_alarm_wall.svg" width="400">
+  <br>
+  <i>Boitier du système réalisé avec une découpeue laser</i>
+</p>
+
+
 
 ## Estimation de la BOM de notre produit
 
@@ -261,6 +271,13 @@ Dans cette optique, nous avons décidé de créer une seconde application Androi
 </p>
 
 On retrouve différents éléments constituant l'application dont un bouton en son centre permettant d'activer/désactiver l'alarme lors de son appui. Elle dispose également d'une barre de navigation en bas avec différents boutons permettant de sélectionner l'appareil sur lequel se connecter ainsi qu'un bouton permettant de voir l'historique des détections et enfin un bouton relatif aux informations de l'application.
+
+A travers la mise en place de cette application nous en avons profité pour réaliser une charte graphique. Ainsi nous avons à côté définir le jeu de couleur que l'on utilise :
+- couleur d'accentuation primaire : `#103f8d`
+- couleur d'accentuation secondaire : `#0078d4`
+- fond : `#e7e6e6`
+
+Ces couleurs ont ensuite été utilisées aussi bien sur notre application, que sur notre logo ou encore sur notre dépôt GitHub.
 
 
 ## Problèmes rencontrés
