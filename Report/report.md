@@ -118,10 +118,10 @@ D'autres éléments sont également utilisés comme :
 <p align="center">
   <img src="Images/Case.png" width="400">
   <br>
-  <i>Boitier du système réalisé avec une découpeue laser</i>
+  <i>Boitier du système assemblé</i>
 </p>
 
-Ce boîtier a été réalisé dans un premier temps avec le site [MakerCase](https://fr.makercase.com/#/) et qui permet d'obtenir une boîte très rapidement et simplement en lui renseignant les cotations. Par la suite on récupère le fichier .svg qu'il génère afin de l'éditer sur le logiciel [Inkscape](https://inkscape.org/fr/). Dans un second temps on vient donc éditer le schéma de notre boîte afin d'inclure les trous pour les capteurs, câble et fixations. On en profite également pour concevoir une plaque faisant office de support murale.
+Ce boîtier a été réalisé dans un premier temps avec le site [MakerCase](https://fr.makercase.com/#/) et qui permet d'obtenir une boîte très rapidement et simplement en lui renseignant les cotations. Par la suite on récupère le fichier .svg qu'il génère afin de l'éditer sur le logiciel [Inkscape](https://inkscape.org/fr/). Dans un second temps on vient donc éditer le schéma de notre boîte afin d'inclure les trous pour les capteurs, câble et fixations. On en profite également pour concevoir une plaque faisant office de support murale. Le tout est fixé en utilisé de la colle à bois pour les parties du boîtier. Quant aux capteurs, ceux-ci sont fixés avec du ruban mousse double face permettant de bien faire tenir les capteurs tout en les conservant afin de les restituer au Fablab une fois le projet terminée.
 
 <p align="center">
   <img src="Images/Case1.jpg" width="483">
@@ -130,6 +130,7 @@ Ce boîtier a été réalisé dans un premier temps avec le site [MakerCase](htt
   <i>Parties constituants le boîtier</i>
 </p>
 
+Une fois construit le boitier possède les dimensions suivantes (L\*l\*p) : 15\*13\*3,6 mm
 
 ## Estimation de la BOM de notre produit
 
