@@ -26,7 +26,7 @@ void runBuzzer() {
   for(int rep=0; rep<5; rep++) {
     for(int freq=1400; freq<=1600; freq=freq+10) {
       tone(BUZZER, freq);
-      led_alarm.setBrightness((int)map(freq, 1400, 1600, 1, 20));
+      led_alarm.setBrightness((int)map(freq, 1400, 1600, 10, 50));
       led_alarm.show();
       delay(50);
     }
@@ -37,7 +37,7 @@ void runBuzzer() {
 void stopBuzzer() {
   led_alarm.clear();
   led_alarm.show();
-  led_alarm.setBrightness(10);
+  led_alarm.setBrightness(50);
   noTone(BUZZER);
 }
 
@@ -77,7 +77,7 @@ void setup() {
   led_alarm.begin();
   led_alarm.clear();
   led_alarm.show();
-  led_alarm.setBrightness(10);
+  led_alarm.setBrightness(50);
 
   BLE.begin();                                          // start bluetooth
   BLE.setLocalName("Detection alarm");                  // set device name
