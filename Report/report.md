@@ -67,9 +67,9 @@ Le système ainsi installé est capable de réaliser les fonctionnalités suivan
   - Voir combien de personnes ont été détectées.
   - Voir l'historique des détections.
 
-```
-(ajouter vidéo de démo)
-```
+https://user-images.githubusercontent.com/72225568/212143804-26f251a3-b9e0-4fa7-94d8-73f0c1a2abcc.mp4
+
+https://user-images.githubusercontent.com/72225568/212143959-f46ecb38-8674-4406-8a82-b690112cbbb5.mp4
 
 
 ## Sécurité globale
