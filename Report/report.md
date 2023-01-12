@@ -174,13 +174,26 @@ Le logiciel embarqué est un code développé sous l'IDE Arduino pour notre Ardu
 
 Afin de pouvoir programmer la carte il faut dans un premier temps configurer l'environnement de programmation en ajouter la carte à l'aide de la librarie [ArduinoBLE](https://www.arduino.cc/reference/en/libraries/arduinoble/). 
 
-Notre code est disposé de la façon suivante : (faire graphe déroulement)
+Afin de gérer les LED on utilise la librarie [Neopixel](https://github.com/adafruit/Adafruit_NeoPixel) d'Adafruit disposant de fonctions permettant de réduire grandement la façon de gérer notre bandeau de LED. Nous utilisons principalement cette librarie afin de gérer la couleur et luminosité des LED.
 
-Afin de gérer les LED on utilise la librarie [Neopixel](https://github.com/adafruit/Adafruit_NeoPixel) d'Adafruit disposant de fonctions permettant de réduire grandement la façon de gérer notre bandeau de LED.
+Pour le reste des composants ceux-ci sont tous connectés à des GPIO digital et fonctionne de la façon suivante : 
+- la capteur PIR renvoie un signal à l'état haut (1) lorsqu'il détecte une personne. Il suffit juste de lire le port qui lui est associé.
+- le buzzer émet un son lorsqu'on lui applique une fréquence. Une fonction *tone* issue d'Arduino permet de le gérer.
+- le bouton renvoie un signal à l'état haut (1) lorsqu'il est maintenu, et à l'état bas (0) sinon. Attention, dans le cadre de notre prototype le code du bouton fait en sorte d'activer l'alarme si celui-ci est appuyé et non relaché.
 
+Le code est décomposé en 5 fonctions qui sont les suivantes :
+- **setup()** : fonction qui initialise l'ensemble des composants de notre système et paramètre le Bluetooth de notre carte Arduino.
+- **loop()** : boucle principale de notre système qui gère ses différents états.
+- **runBuzzer()** : fonction qui permet à l'alarme de jouer un son et activer ses LED lorsqu'elle détecte quelqu'un.
+- **stopBuzzer()** : fonction qui arrête le buzzer et remet les LED dans le même état qu'avant.
+- **setAlarmState()** : fonction qui gère l'activation ou la désactivation de l'alarme en fonction de la valeur reçue en Bluetooth.
+
+Notre code est programmé de façon à suivre ce fonctionnement : (faire graphe déroulement)
 ```
 (continuer de rédiger)
 ```
+
+
 
 
 ## Format des messages échangés
