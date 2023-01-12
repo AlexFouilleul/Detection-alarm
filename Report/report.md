@@ -170,8 +170,16 @@ Enfin une autre norme auquel on pourrait penser concerne le bruit que peut émet
 
 ## Définition et implémentation du logiciel embarqué de l'objet
 
+Le logiciel embarqué est un code développé sous l'IDE Arduino pour notre Arduino Nano 33 BLE.
+
+Afin de pouvoir programmer la carte il faut dans un premier temps configurer l'environnement de programmation en ajouter la carte à l'aide de la librarie [ArduinoBLE](https://www.arduino.cc/reference/en/libraries/arduinoble/). 
+
+Notre code est disposé de la façon suivante : (faire graphe déroulement)
+
+Afin de gérer les LED on utilise la librarie [Neopixel](https://github.com/adafruit/Adafruit_NeoPixel) d'Adafruit disposant de fonctions permettant de réduire grandement la façon de gérer notre bandeau de LED.
+
 ```
-(à rédiger)
+(continuer de rédiger)
 ```
 
 
