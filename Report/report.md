@@ -198,7 +198,7 @@ Le code est décomposé en 5 fonctions qui sont les suivantes :
 
 Notre code est programmé de façon à suivre ce fonctionnement :
 <p align="center">
-  <img src="Images/Schema_fonctionnement.png" width="500">
+  <img src="Images/Schema_fonctionnement.png" width="600">
   <br>
   <i>Schéma de connexion des composants du système</i>
 </p>
@@ -228,10 +228,6 @@ Pour résumer le système est capable de communiquer à travers ses caractérist
 - nb_detected : cette caractéristique ne peut qu'être lue. Elle renvoie le nombre de personne détectée par le système quand celui-ci est activé.
 - activation : cette caractéristique peut être lue et écrite. Elle permet de connaitre l'état dans lequel l'alarme est (0 = désactivé, 1 = activé). L'utilisateur peut également définir l'état de l'alarme en envoyant lui même la valeur (0 ou 1) pour définir l'état du système.
 - pin_code : caractéristique qui peut également être lue et écrite et qui permet d'envoyer le code pin au système. Celui-ci va alors vérifier s'il est correct et va renvoyer une information connaissant son état (0 = incorrect, 1 = correct)
-
-```
-(ajouter schéma des données échangées)
-```
 
 
 ## Métriques du logiciel embarqué
