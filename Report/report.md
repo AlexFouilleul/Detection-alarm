@@ -83,9 +83,17 @@ Outre l'aspect sécurité physique, on retrouve aussi l'aspect confidentialité 
 
 ## Respect de la vie privée (RGPD)
 
-```
-(à rédiger)
-```
+La protection de la vie privée est un aspect important à prendre en compte pour les alarmes, en particulier pour les alarmes connectées qui peuvent collecter, stocker et transmettre des données personnelles. Le [Règlement Général sur la Protection des Données (RGPD)](https://www.cnil.fr/fr/reglement-europeen-protection-donnees) de l'Union Européenne est une réglementation qui vise à protéger les données personnelles des citoyens de l'Union Européenne. Il impose des obligations aux entreprises qui traitent des données personnelles, y compris les fabricants et les distributeurs d'alarmes.
+
+Pour respecter le RGPD, les fabricants et les distributeurs d'alarmes doivent :
+- Notifier les utilisateurs de la collecte, de l'utilisation et de la transmission de leurs données personnelles, ainsi que de leurs droits en matière de protection des données.
+- S'assurer que les utilisateurs donnent leur consentement explicite pour la collecte, l'utilisation et la transmission de leurs données personnelles.
+- Sécuriser les données personnelles stockées et transmises pour éviter les fuites de données ou les accès non autorisés.
+- Respecter les demandes des utilisateurs en matière d'accès, de rectification ou de suppression de leurs données personnelles.
+- Nommer un délégué à la protection des données (DPO) si les traitements de données sont importants en termes de quantité, de sensibilité ou de risque pour les droits et libertés des personnes concernées.
+- Notifier les autorités de protection des données et les personnes concernées en cas de violation de la sécurité des données.
+
+Il est important de noter que les fabricants et les distributeurs d'alarmes, dont nous, doivent s'assurer de respecter toutes les exigences du RGPD pour éviter les pénalités financières élevées qui peuvent aller jusqu'à 4% du chiffre d'affaires annuel ou 20 millions d'euros, selon le cas le plus élevé. Il est donc important pour nous de nous assurer de disposer des outils et des ressources nécessaires afin respecter les exigences de cette réglementation.
 
 
 ## Architecture matérielle de l'objet
