@@ -196,12 +196,12 @@ Le code est décomposé en 5 fonctions qui sont les suivantes :
 - **stopBuzzer()** : fonction qui arrête le buzzer et remet les LED dans le même état qu'avant.
 - **setAlarmState()** : fonction qui gère l'activation ou la désactivation de l'alarme en fonction de la valeur reçue en Bluetooth.
 
-Notre code est programmé de façon à suivre ce fonctionnement : (faire graphe déroulement)
-```
-(continuer de rédiger)
-```
-
-
+Notre code est programmé de façon à suivre ce fonctionnement :
+<p align="center">
+  <img src="Images/Schema_fonctionnement.png" width="500">
+  <br>
+  <i>Schéma de connexion des composants du système</i>
+</p>
 
 
 ## Format des messages échangés
