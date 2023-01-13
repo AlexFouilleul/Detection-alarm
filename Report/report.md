@@ -265,10 +265,17 @@ Le boitier disposant de place à l'intérieur et le système disposant d'un born
 
 ## Analyse du cycle de vie du produit (ACV)
 
-```
-(à rédiger)
-[utile](https://www.envol-entreprise.fr/acv-lanalyse-du-cycle-de-vie-dun-produit/#:~:text=L'Analyse%20du%20Cycle%20de%20vie%20est%20une%20m%C3%A9thode%20d,d%C3%A9marche%20d'%C3%A9co%2Dconception.)
-```
+Le cycle de vie d'une alarme comprend plusieurs étapes, allant de la conception à la fin de vie.
+
+- **Conception** : la première étape consiste à concevoir le produit, c'est-à-dire à définir les spécifications techniques et les exigences en matière de fonctionnalités. Cette étape peut également inclure des études de marché pour déterminer les besoins des consommateurs et des utilisateurs potentiels.
+- **Développement** : une fois la conception terminée, le produit est développé en utilisant des techniques de fabrication et des matériaux appropriés. Des tests et des essais sont effectués pour s'assurer que le produit répond aux spécifications et aux exigences de qualité.
+- **Production** : une fois le développement terminé, le produit est fabriqué en série. La production peut être effectuée en interne ou par des sous-traitants.
+- **Distribution** : le produit est ensuite distribué aux revendeurs et aux consommateurs finaux.
+- **Utilisation** : une fois installé et utilisé, l'alarme peut être utilisée pour protéger les propriétés et les personnes contre les intrusions et les incendies.
+- **Fin de vie** : après une certaine période d'utilisation, l'alarme peut devenir obsolète ou ne plus fonctionner correctement. Il est alors nécessaire de la remplacer ou de la réparer.
+- **Recyclage** : enfin, lorsque l'alarme atteint la fin de sa vie, il est important de la recycler pour minimiser l'impact sur l'environnement.
+
+Il est important de noter que chaque étape de ce cycle de vie a des conséquences éthiques et environnementales potentielles, comme l'utilisation de matériaux et de processus de fabrication durables, la mise en place de pratiques de recyclage et de traitement des déchets adéquates, et l'utilisation de pratiques éthiques dans la production. Il est donc important pour les fabricants et les distributeurs d'alarmes de prendre en compte ces facteurs dans leur processus de développement et de production pour minimiser l'impact sur l'environnement et les consommateurs.
 
 
 ## Recherche et analyse des produits concurrents
