@@ -262,7 +262,7 @@ Cependant on peut tout de même calculer la puissance consommée. En effet, d'ap
 Cependant les LED et le buzzer ne fonctionnent que quand un utilisateur est connecté au système ou que celui-ci ne détecte quelqu'un, donc il ne fonctionne que pendant un court lapse de temps.
 En faisant la somme des éléments qui consomment en permanence on obtient alors un courant de 35,4 mA. Soit une puissance théorique de P = U\*i = 3,3 * 0,0354 = 117 mW
 
-En réalisant des mesures avec un multimètre USB et également avec une alimentation de laboratoire on relève une puissance moyenne de ??? mW. Ces mesures ne sont pas des plus précises mais permettent d'avoir une première approximation de la consommation réelle.
+En réalisant des mesures avec un multimètre USB et également avec une alimentation de laboratoire on relève une puissance moyenne de 150 mW. Ces mesures ne sont pas des plus précises mais permettent d'avoir une première approximation de la consommation réelle.
 
 Le boitier disposant de place à l'intérieur et le système disposant d'un bornier permettant de l'alimenter, on peut aisément rajouter une pile au format 6LR61 (9V). La carte Arduino disposant d'un régulateur, le système peut alors admettre des tensions alant de 3,3V à 21V.
 
