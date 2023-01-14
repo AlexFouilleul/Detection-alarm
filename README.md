@@ -33,7 +33,7 @@ For more informations, please take a look at the [report](https://github.com/Ale
 - [Grove buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/)
 - [Grove PIR sensor](https://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/)
 - [Grove button](https://wiki.seeedstudio.com/Grove-Button/)
-- Ligthstrip (8*LED WS2812B) 
+- Ligthstrip (7*LED WS2812B) 
 
 ### Software
 - "[LightBlue® - Bluetooth Low Energy](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=fr&gl=US&pli=1)" available on the Google Play Store and Apple App Store<br>
