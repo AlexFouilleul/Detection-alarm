@@ -124,7 +124,7 @@ D'autres éléments sont également utilisés comme :
 - Un boîtier conçu à l'aide d'une découpeuse laser et d'une plaque de contreplaqué de 3 mm.
 
 <p align="center">
-  <img src="Images/Case.png" width="400">
+  <img src="Images/Case4.png" width="400">
   <br>
   <i>Boitier du système assemblé</i>
 </p>
