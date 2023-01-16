@@ -1,4 +1,4 @@
-# Rapport mini-projet IoT
+# Rapport projet IoT : alarme à détection
 
 <img src="Images/Logo_polytech.png" width="200" align="right">
 
