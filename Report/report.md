@@ -112,7 +112,7 @@ Afin de mener à bien ce projet nous avons utilisé différents éléments qui s
 L'ensemble des composants sont connectés de la manière suivantes : 
 
 <p align="center">
-  <img src="Images/PIN_connection.png" width="500">
+  <img src="Images/PIN_connection.png" width="600">
   <br>
   <i>Schéma de connexion des composants du système</i>
 </p>
@@ -198,7 +198,7 @@ Le code est décomposé en 5 fonctions qui sont les suivantes :
 
 Notre code est programmé de façon à suivre ce fonctionnement :
 <p align="center">
-  <img src="Images/Schema_fonctionnement.png" width="600">
+  <img src="Images/Schema_fonctionnement.png" width="700">
   <br>
   <i>Schéma de connexion des composants du système</i>
 </p>
@@ -217,7 +217,7 @@ Les caractéristiques conçues reposent sur des identifiants uniques (UUID) dér
 Le tout est illustré de la façon suivante :
 
 <p align="center">
-  <img src="Images/Bluetooth_caracteristics.png" width="300">
+  <img src="Images/Bluetooth_caracteristics.png" width="400">
   <br>
   <i>Schéma de l'intégration du Bluetooth du système dans l'Arduino</i>
 </p>
@@ -338,8 +338,8 @@ Lors de la réalisation de ce projet différents problèmes se sont confrontés 
 Dès le début du projet nous avons rencontré un problème lié à la limitation de l'utilisation de la caméra embarquée sur notre kit Arduino. Nous avons travaillé autour de ce capteur dans l'ambition de l'intégrer plus tard dans notre système. Notre objectif au début de ce projet était d'integrer la caméra pour réaliser ensuite un système capable de détecter des êtres humains à l'aide d'un modèle de réseau de neuronnes convolutionnels ( CNN ) du type YOLO net par exemple, l'idée était de réaliser une alarme de détection d'êtres humains, c'est-à-dire que l'alarme ne se déclanche que lorsqu'elle detecte la présence d'une personne, par exemple l'alarme ne se déclenchera pas si elle détecte un chat. Cependant lors de nos essais nous nous sommes rendus compte que le résultat obtenu est peu (voir pas) exploitable, la qualité de la caméra laissant grandement à désirer. Celle-ci étant un module de 0,3 MP pouvant gérer différentes résolutions de photos allant de 176 x 144 (QCIF) à 640 x 480 (VGA). Nous n'avons jamais pu tester la dernière résolution de caméra étant donné que notre Arduino ne dispose pas assez de stockage pour contenir l'image. Pour les autres résolutions on obtient des photos floues, peu détaillées à courte ou longue distance et avec une colorimétrie qui tend vers le vert comme en témoignent les photos ci-dessous.
 
 <p align="center">
-  <img src="Images/Camera_picture1.png" width="305">
-  <img src="Images/Camera_picture2.png" width="300">
+  <img src="Images/Camera_picture1.png" width="408">
+  <img src="Images/Camera_picture2.png" width="400">
   <br>
   <i>Images obtenues lors de nos essais avec la caméra OV7675</i>
 </p>
